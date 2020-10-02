@@ -1,0 +1,107 @@
+@import "./modules/_mixins"
+@import "./modules/_functions"
+@import "./modules/_variables"
+@import "./modules/_loader"
+@import "./modules/_navbar"
+@import "./modules/_parallax"
+@import "./modules/_thumbnail"
+@import "./modules/_form"
+@import "./modules/_footer"
+
+*
+	margin: 0
+	padding: 0
+	border: 0
+	outline: 0
+	box-sizing: border-box
+	font-family: sans-serif
+
+body, html 
+	height: auto
+	overflow-x: hidden
+	position: relative
+
+h1
+	font-weight: bold
+ 
+a 
+	text-decoration: none
+
+ul
+	list-style-type: none
+
+.wrapper
+	min-width: 325px
+	max-width: 1440px
+	width: 100%
+	margin: 0 auto
+
+body 
+	background-color: #f8f9fa
+
+%inactive-link
+	pointer-events: none
+	
+.active-link
+	pointer-events: auto
+
+.stop-scrolling
+	position: fixed
+	padding-right: 17px
+
+%pointer
+	cursor: pointer
+
+%disable-higlight
+	user-select: none
+	-webkit-user-select: none
+	-khtml-user-select: none
+	-moz-user-select: none
+	-ms-user-select: none
+
+.no-wrap
+	white-space: nowrap
+
+%font-awsome
+	display: inline-block
+	font-family: 'Font Awesome 5 Free'
+	font-style: normal
+	font-variant: normal
+	font-size: inherit
+	text-rendering: auto
+	-webkit-font-smoothing: antialiased
+
+
+ol
+	list-style: none
+	margin: -.5em 0 -.5em 0
+	padding: 0 0 0 30px
+	& > li
+		margin: 0 0 -.66em 0
+	
+table
+	tr
+		td
+			&:first-child
+				width: 150px
+	
+
+
+$tab : 16px
+.tab
+	padding-left: $tab
+
+.bullet
+	content: "•"
+	padding-right: 8px
+
+.multiTab
+	padding-left: $tab
+
+.heavy
+	font-weight: 700
+
+.light
+	font-weight: 400
+	opacity: .95
+	

@@ -1,0 +1,183 @@
+nav
+	position: fixed
+	top: 0
+	z-index: 4
+	width: 100%
+	background-color: #fff
+	padding: 25px 25px 70px 25px
+	transition: background-color .3s ease-out
+	@include tablet
+		padding: 25px 50px 70px 50px
+	@include mediumDesktop
+		padding: 25px 120px 70px 120px
+	& > div
+		position: relative
+		@extend .wrapper
+		max-width: 1680px !important
+		min-width: 290px !important
+
+		.img, p
+			@extend %inactive-link
+			@extend %disable-higlight
+
+		li
+			@extend %disable-higlight
+
+		.menu-toggle, li, .logo-container
+			@extend %pointer
+
+		& > div
+			& > .logo-container
+				position: absolute
+				top: 0
+				left: 0
+				display: flex
+				align-items: center
+				@include tablet
+					top: -10px
+				& > .img
+					background: url(../img/icon_trans_cut-80x80.png)
+					background-size: contain
+					background-repeat: no-repeat
+					height: 50px
+					width: 50px
+					@include tablet
+						height: 60px
+						width: 60px
+				& > p
+					text-align: center
+					text-transform: uppercase
+					color: color(secondary)
+					font-size: 22px
+					margin: 0 0 0 20px
+					@include largeMobile
+						font-size: 30px
+				&:hover
+					& > p
+
+			& > .menu-toggle
+				display: flex
+				align-items: center
+				position: absolute
+				top: 0
+				right: 0
+				height: 50px
+				@include smallMobile
+					width: 110px
+				@include largeMobile
+					width: 140px
+					top: -5px
+					height: 60px
+				@include largeTablet
+					display: none
+				& > div
+					@extend %inactive-link
+					@extend %disable-higlight
+					display: grid
+					grid-auto-flow: column
+					align-items: center
+					text-transform: uppercase
+					color: color(secondary)
+					font-size: 0
+					text-align: center
+					@include smallMobile
+						font-size: 22px
+					@include largeMobile
+						font-size: 30px
+					&::before
+						@extend %font-awsome
+						font-weight: 700
+						margin: 0 .5em 0 0
+						font-size: 22px !important
+						@include smallMobile
+							width: auto
+							padding: 0 10px 0 0
+							@include largeMobile
+								font-size: 30px !important
+				& > .btnMenuOpen
+					&::before
+						content: '\f0c9'
+
+				& > .btnMenuClose
+					&::before
+						content: '\f00d'
+
+		& > .main-nav
+			display: block
+			position: absolute
+			top: -10px
+			right: 0
+			width: percentage(1000/1680)
+			height: 60px
+			@include largeTablet
+				display: flex
+				justify-content: space-between
+				align-items: center
+			@include mediumDesktop
+				width: percentage(1000/1680)
+			& > li
+				font-size: 20px
+				color: color(primary)
+				transition: color .2s ease-out
+				@include largeDesktop
+					padding: 15.5px 10px
+					font-size: 25px
+
+			& > li:hover
+				@include largeTablet
+
+	&.transparent
+		@include largeMobile
+			background-color: transparent
+			& > div
+				& > .main-nav
+					@include tablet
+						& > li
+							color: #fff
+						& > li:nth-child(1), & > li:nth-child(2)
+							@include largeTablet
+								color: color(secondary)
+						& > li:hover
+							@include largeTablet
+					  
+	&.mobile
+		background-color: #fff
+		& > div
+			& >.main-nav
+				top: 65px
+				left: -25px
+				width: 100vw
+				background-color: #fff
+				height: auto
+				max-height: 100vh
+				@include tablet
+					left: -50px
+				& > li
+					text-transform: uppercase
+					padding: 25px 25px
+					color: color(primary)
+					border-bottom: 2px #f8f9fa solid
+					font-size: 22px
+					width: auto
+					@include largeMobile
+						font-size: 25px
+					@include tablet
+						font-size: 30px
+						padding: 25px 50px
+				& > li:first-child
+					border-top: 2px #f8f9fa solid
+				& > li:hover
+					background-color: #f8f9fa
+
+			.shadow-mobile
+				z-index: -1
+				height: 100vh
+				width: 100vw
+				position: absolute
+				top: 70px
+				left: -25px
+				background-color: rgba(0, 0, 0, 0.5)
+				@include tablet
+					left: -50px
+
+					

@@ -1,0 +1,230 @@
+$buttonHeight: 75px
+$sitePaddingX: 20px //max-width: 600px or mixin largeMobile
+$gridMaxWidth: 1680px 
+.landing-page
+	overflow: hidden
+	position: relative
+	display: grid
+	height: auto
+	place-content: center
+	padding: 0 $sitePaddingX
+	background: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), url(../img/parallax-min.jpg) no-repeat center
+	background-size: cover
+	background-color: #6d5445
+	@include largeMobile
+		background: none
+		padding: 0 20px
+		background-color: color(primary)
+	@include tablet
+		padding: 0 50px
+	@include largeTablet
+		background-color: transparent
+	@include mediumDesktop
+		padding: 0 120px
+	& > div
+		display: grid
+		grid-template-columns: auto
+		grid-template-rows: 100px 100px 340px 175px auto
+		grid-template-areas: "header" "." "text-container" "button-container" "announcement"
+		min-height: 840px
+		@include largeMobile
+			min-height: 1000px
+			max-width: $gridMaxWidth
+			grid-template-columns: percentage(210/760) percentage(240/760) auto percentage(280/760)
+			grid-template-rows: 100px auto 360px 240px 170px auto
+			grid-template-areas: "header header header header" ". . . ." "text-container text-container . ." "button-container button-container . ." "announcement announcement announcement announcement" ". . triangle ."
+		@include largeTablet
+			grid-template-columns: percentage(360/1680) percentage(290/1680) percentage(380/1680) percentage(650/1680) // 1680px = $gridMaxWidth, percentage() bug doesn't alow sass variables
+			grid-template-rows: 80px auto 400px 150px 100px auto
+			grid-template-areas: "header header header header" ". . . ." "text-container text-container img img" "button-container . img img" "button-container . announcement announcement" ". . . triangle"
+			min-height: 850px
+		@include largeDesktop
+			height: 100vh
+			max-height: 850px
+		@media ( min-width: 1920px )
+			grid-template-columns: 360px 290px 380px 650px
+
+		& > div:not(.background-block)
+			position: relative
+			
+		& > header
+			grid-area: header
+
+		& > .text-container
+			z-index: 3
+			grid-area: text-container
+			@include largeMobile
+				min-width: 360px
+				margin: 40px 0 0 0
+			@include largeTablet
+				margin: 0
+				padding: 0 20px 0 0
+			& > p
+				@extend %disable-higlight
+			& > p:nth-child(1)
+				font-family: 'Times New Roman'
+				color: #fff
+				font-size: 20px
+				@include smallMobile
+					font-size: 25px
+				@include largeMobile
+					font-size: 30px
+				@include tablet
+					font-size: 35px
+				@include largeTablet
+					font-size: 32px
+					color: #000
+			& > span:nth-child(2)
+				display: block
+				height: 3px
+				width: 150px
+				margin: 10px 0
+				background-color: #fff
+				@include largeMobile
+					height: 5px
+					margin: 15px 0
+				@include largeTablet
+					background-color: #223D6E
+			& > p:nth-child(3)
+				font-weight: bold
+				color: #fff
+				font-size: 34px
+				@include smallMobile
+					font-size: 38px
+				@include largeMobile
+					font-size: 43px
+				@include tablet
+					font-size: 48px
+				@include largeTablet
+					font-size: 44px
+					color: #000
+				@include mediumDesktop
+					font-size: 50px
+
+		& > .img
+			@include largeMobile
+				position: relative
+				z-index: 2
+				grid-area: 3 / 2 / 5 / 5
+				background: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), url(../img/parallax-min.jpg) no-repeat center
+				background-size: cover
+				background-position: center
+				width: 100%
+			@include largeTablet
+				background-position: right
+				grid-area: img
+
+		& > .button-container
+			z-index: 3
+			grid-area: button-container
+			display: grid
+			grid-template-areas: "button1 button1" "button2 button2"
+			grid-template-rows: $buttonHeight $buttonHeight
+			align-content: space-between
+			@include largeMobile
+				grid-template-areas: "button1 button2"
+				grid-template-columns: 45% 45%
+				grid-template-rows: $buttonHeight
+				justify-content: space-between 
+				align-content: auto
+				align-self: center
+				min-width: 500px
+				margin: -70px 0 0 0
+			@include largeTablet
+				margin: 0
+				grid-template-rows: 100px 100px
+				grid-template-columns: auto
+				grid-template-areas: "button1" "button2"
+				align-content: space-between
+				align-self: auto
+				justify-content: stretch
+				min-width: auto
+
+			& > button
+				@extend %disable-higlight
+				@extend %pointer
+				width: 100%
+				font-weight: bold
+				font-size: 20px
+				@include largeTablet
+					font-size: 25px
+				@include largeDesktop
+					font-size: 30px
+			& > button:nth-child(1)
+				grid-area: button1
+				background-color: transparent
+				border: 4px solid color(background)
+				color: color(background)
+				@include largeMobile
+				@include largeTablet
+					border: 4px solid #223D6E
+					color: #223D6E
+				@include mediumDesktop
+				&:hover
+					border: 4px solid #fff
+					color: #fff
+					@include largeTablet
+						border: 4px solid #223D6E
+						color: #223D6E
+			& > button:nth-child(2)
+				grid-area: button2
+				background-color: #223D6E
+				color: #fff
+				&:hover
+					background-color: color(primary-hover)
+					color: #fff
+
+		& > .announcement
+			z-index: 2
+			grid-area: announcement
+			& > div
+				display: grid
+				place-content: center
+				background-color: #37583C
+				height: calc(100% + (#{$buttonHeight} / 2))
+				width: calc( 100% +  (#{$sitePaddingX}) * 2)
+				margin: calc(-#{$buttonHeight} / 2) 0 0 -#{$sitePaddingX}
+				@include largeMobile
+					height: calc( 85% + 20px )
+					width: percentage(500/760)
+					margin: -50px 0 0 0
+					justify-content: start
+					align-content: center
+				@include largeTablet
+					height: 150%
+					width: 100%
+					margin: -50px 0 0 -80px
+				& > p
+					margin: calc(#{$buttonHeight} / 2) 0 0 0
+					padding: 40px
+					color: #fff
+					font-size: 20px
+					text-align: center
+					@include largeMobile
+						margin: 0
+						text-align: left
+						font-size: 23px
+					& > span
+						font-size: 16px
+						color: lighten( #37583C, 60%)
+	& > .background-block
+		position: absolute
+		right: 0
+		top: 0
+		height: 886px
+		background-color: transparent
+		max-width: 770px
+		width: percentage(770/1920)
+		float: right
+		display: none
+		@include largeMobile
+			display: block
+			background-color: color(background)
+		@include largeTablet
+			z-index: -1
+			max-width: 1500px
+			background-color: #223D6E
+			width: percentage(770/1920)
+		@include largeDesktop
+			height: 100vh
+				
