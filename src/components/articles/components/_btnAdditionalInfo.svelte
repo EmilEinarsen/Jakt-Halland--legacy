@@ -1,38 +1,44 @@
 <script>
-	import { slide } from 'svelte/transition'
 
-	export let title
+	import { slide, fade } from 'svelte/transition'
+
 	let open = false
 
 </script>
 
 
+<div class="container">
 
-
-<div>
 	<button on:click={() => open = !open} class:open>
-		{title.toUpperCase()}
+		<slot name="name">
+			Name...
+		</slot>
 	</button>
-	{#if open}
-		<div class="basic" transition:slide="{{duration: 300}}"><slot class="basic"></slot></div>
-	{/if}
-</div>
 
+	{#if open}
+	<div class="content" transition:slide="{{duration: 300}}">
+		<span transition:fade="{{duration: 300}}">
+			<slot>
+				Content...
+			</slot>
+		</span>
+	</div>
+	{/if}
+
+</div>
 
 
 <style lang="sass">
 
 $width: 100%
 
-div
+.container
 	width: $width
-	padding: 0 20px
-	@media (min-width: 880px)
-		padding: 0
-	.basic
+	.content
 		font-size: 20px
 		width: $width
-	& > button
+		margin: 20px 10px
+	button
 		display: grid
 		grid-auto-flow: column
 		text-align: left

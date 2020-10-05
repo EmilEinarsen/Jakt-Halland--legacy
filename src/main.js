@@ -16,6 +16,10 @@ String.prototype.indicesOf = function(searchStr, caseSensitive, startIndex) {
     }
     return indices
 }
+Array.prototype.removeFirst = function() {
+    this.shift
+    return this
+}
 
 import App from './App.svelte';
 

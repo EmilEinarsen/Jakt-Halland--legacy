@@ -3,12 +3,12 @@
 	
 	import { state } from './js/stores'
 	import { body } from './js/Helpers'
-	import { getPosY, LazyImgLoading, scrollToInstantly } from './js/Tools'
+	import { LazyImgLoading } from './js/Tools'
 
 	import Navbar from './components/navbar.svelte'
 	import Parallax from './components/parallax.svelte'
 	import Thumbnail from './components/thumbnail.svelte'
-	import Articles from './components/article/articles.svelte'
+	import Articles from './components/articles.svelte'
 	import { getEvents } from './js/Server'
 	import { structureApprouchingEvents } from './js/Announcement'
 
@@ -16,8 +16,6 @@
 	let lazyImgLoading
 
 	$: $state.events = events
-	$: body.classList = $state.menu ? 'stop-scrolling' : ''
-	$: body.style.top = $state.posY
 
 	data()
 	async function data() {
@@ -26,15 +24,6 @@
 		} catch (error) {
 			console.log(error)
 		}
-	}
-
-	export const toggleScroll = () => $state.menu ? disableScroll() : enableScroll()
-	export function enableScroll() {
-		scrollToInstantly({top: $state.posY})
-		$state.posY = ''
-	}
-	function disableScroll() {
-		$state.posY = `-${getPosY()}px`
 	}
 	
 	/* function scrollIntoView(param) {
@@ -51,7 +40,7 @@
 
 <svelte:window on:resize={lazyImgLoading.load} on:scroll={lazyImgLoading.load} />
 
-<Navbar {toggleScroll} {enableScroll} />
+<Navbar />
 
 <Parallax {events} />
 <Thumbnail />

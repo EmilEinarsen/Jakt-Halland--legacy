@@ -34,7 +34,7 @@ $gridMaxWidth: 1680px
 			grid-template-rows: 100px auto 360px 240px 170px auto
 			grid-template-areas: "header header header header" ". . . ." "text-container text-container . ." "button-container button-container . ." "announcement announcement announcement announcement" ". . triangle ."
 		@include largeTablet
-			grid-template-columns: percentage(360/1680) percentage(290/1680) percentage(380/1680) percentage(650/1680) // 1680px = $gridMaxWidth, percentage() bug doesn't alow sass variables
+			grid-template-columns: percentage(360/1680) percentage(260/1680) percentage(410/1680) percentage(650/1680) // 1680px = $gridMaxWidth, percentage() bug doesn't alow sass variables
 			grid-template-rows: 80px auto 400px 150px 100px auto
 			grid-template-areas: "header header header header" ". . . ." "text-container text-container img img" "button-container . img img" "button-container . announcement announcement" ". . . triangle"
 			min-height: 850px
@@ -94,12 +94,9 @@ $gridMaxWidth: 1680px
 				@include largeMobile
 					font-size: 43px
 				@include tablet
-					font-size: 48px
+					font-size: 45px
 				@include largeTablet
-					font-size: 44px
 					color: #000
-				@include mediumDesktop
-					font-size: 50px
 
 		& > .img
 			@include largeMobile
@@ -185,7 +182,7 @@ $gridMaxWidth: 1680px
 				width: calc( 100% +  (#{$sitePaddingX}) * 2)
 				margin: calc(-#{$buttonHeight} / 2) 0 0 -#{$sitePaddingX}
 				@include largeMobile
-					height: calc( 85% + 20px )
+					height: calc( 100% + 50px )
 					width: percentage(500/760)
 					margin: -50px 0 0 0
 					justify-content: start

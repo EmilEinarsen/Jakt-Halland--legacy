@@ -2,7 +2,6 @@
 @import "./modules/_functions"
 @import "./modules/_variables"
 @import "./modules/_loader"
-@import "./modules/_navbar"
 @import "./modules/_parallax"
 @import "./modules/_thumbnail"
 @import "./modules/_form"
@@ -16,7 +15,7 @@
 	box-sizing: border-box
 	font-family: sans-serif
 
-body, html 
+body, html
 	height: auto
 	overflow-x: hidden
 	position: relative
@@ -38,16 +37,12 @@ ul
 
 body 
 	background-color: #f8f9fa
-
+	
 %inactive-link
 	pointer-events: none
-	
+
 .active-link
 	pointer-events: auto
-
-.stop-scrolling
-	position: fixed
-	padding-right: 17px
 
 %pointer
 	cursor: pointer
@@ -91,10 +86,6 @@ $tab : 16px
 .tab
 	padding-left: $tab
 
-.bullet
-	content: "•"
-	padding-right: 8px
-
 .multiTab
 	padding-left: $tab
 
@@ -104,4 +95,7 @@ $tab : 16px
 .light
 	font-weight: 400
 	opacity: .95
+
+.italic
+	font-style: italic
 	

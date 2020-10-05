@@ -4,7 +4,7 @@ import commonjs from '@rollup/plugin-commonjs';
 import livereload from 'rollup-plugin-livereload';
 import { terser } from 'rollup-plugin-terser';
 import preprocess from 'svelte-preprocess'
-import pug2svelte from 'pug2svelte'
+import { markdown } from 'svelte-preprocess-markdown'
 
 const production = !process.env.ROLLUP_WATCH;
 
@@ -39,7 +39,12 @@ export default {
 	},
 	plugins: [
 		svelte({
-			preprocess: preprocess(),
+			// 2. add '.md', to the extensions  
+			extensions: ['.svelte','.md'],
+			preprocess: [
+				preprocess(),
+				markdown()
+			],
 			// enable run-time checks when not in production
 			dev: !production,
 			// we'll extract any component CSS out into

@@ -11,7 +11,7 @@ export const articleData = {
 					lists: [
 						{
 							title: 'I paketet ingår:',
-							className: 'bullet-list',
+							type: 'bullet',
 							items: [
 								'Litteratur, inklusive ljudbok, skickas till dig i förväg.',
 								'Övningsskjutning med hagel vid ett tillfälle, exklusive ammunition.',
@@ -20,16 +20,16 @@ export const articleData = {
 						},
 						{
 							title: 'Avgiften är uppdelad i två fakturor:',
-							className: '',
+							type: 'number',
 							items: [
-								'1 000 kr (anmälningsavgift)',
-								'3 000 kr (betalas 10 dagar innan kursen startar)',
+								'1 000 kr (anmälningsavgift).',
+								'3 000 kr (betalas 10 dagar innan kursen startar).',
 							],
 						},
 					],
-					main: `
-						Vi träffas 10 kvällar varannan vecka mellan 18.00 - 21.00, där vi går igenom hela teoridelen tillsammans.
-						Det ger er gott om tid att studera mellan mötena.
+					main: 
+						`Under utbildningen går vi igenom hela teoridelen tillsammans. Detta sker över 10 kvällar, varannan vecka mellan 18.00 - 21.00.
+						Vilket ger er gott om tid att studera.
 						`,
 				},
 				{
@@ -38,7 +38,7 @@ export const articleData = {
 					lists: [
 						{
 							title: 'I paketet ingår:',
-							className: 'bullet-list',
+							type: 'bullet',
 							items: [
 								'Litteratur, inklusive ljudbok, skickas till dig i förväg.',
 								'Övningsskjutning med hagel.',
@@ -50,23 +50,23 @@ export const articleData = {
 						},
 						{
 							title: 'Avgiften är uppdelad i två fakturor:',
-							className: '',
+							type: 'number',
 							items: [
-								'2 000 kr (anmälningsavgift)',
-								'6 800 kr (betalas 10 dagar innan kursen startar)',
+								'2 000 kr (anmälningsavgift).',
+								'6 800 kr (betalas 10 dagar innan kursen startar).',
 							],
 						},
 					],
-					main: `
-						Intensivkursen pågår under 3,5 dagar (torsdag till söndag). Under ett samlat pris kommer du lära dig allt som behövs för att ta jägarexamen.
-						`,
+					main: 
+						`Under ett samlat pris kommer du lära dig allt som behövs för att ta jägarexamen, på 3.5 dagar (torsdag till söndag).
+					`,
 				},
 			],
 			info: [
 				{
 					title: `Jägarexamen innehåll`,
-					text: `
-						LITERATUR 
+					text: 
+						`LITERATUR 
 						Vi kommer gå genom litteraturen. 
 						Däremot kommer fokus  att ligga på skjutdelen hjälpa er med att sortera genom litteraturen. 
 						Under kurstillfället kommer det att vara begränsat med teoritimmar. 
@@ -84,7 +84,6 @@ export const articleData = {
 						
 						TEORIPROV
 						Avläggning av samtliga prov sker inför en provledare för att jägarexamen ska vara godkänd.
-
 					`
 				},
 				{
@@ -137,7 +136,7 @@ export const articleData = {
 					lists: [
 							{
 							title: 'Utbildningen omfattar:',
-							className: 'bullet-list',
+							type: 'bullet',
 							items: [
 								'Jaktledarens ansvar och uppgift.',
 								'Planering av jakt.',
@@ -148,27 +147,33 @@ export const articleData = {
 							],
 						},
 					],
-					main: `
-						Förkunskaper: Jägarexamen krävs.
+					main: 
+						`Förkunskaper: Jägarexamen krävs.
 
 						Utbildingen sker på en lördag. I priset ingår litteratur, lunch samt för- och eftermiddagskaffe.
-						Utbildningens syfte är att ge deltagaren kunskaper om vad som ingår i jaktledarens roll och vad som krävs för att få ett fungerande jaktlag. 
 						
-						En jaktledaren ska även ha kunskap om vilka lagar och regler som gäller vid jakt. 
-						Jaktledaren ska genom sitt uppträdande sätta den etiska och moraliska normen i jaktlaget, då det är han som är ytterst ansvarig om något skulle hända.
-						Efter genomförd utbildning erhålls ett diplom.
+						Dess syfte är att både ge kunskap om vad som krävs som jaktledare och för att få ett fungerande jaktlag.
 					`,
 				},
 				{
-					main: `Avgiften är uppdelad i två fakturor:
-						<0 
-						<-500 kr (anmälningsavgift).->
-						<-1 300 kr (betalas 10 dagar innan kursen startar).->
-						 0>
-						Vår utbildningen är godkänd av Svea skog med flera. 
-						Svea skog har utbildningskrav på alla jaktledare för utarrenderade jaktmarker.
-						Utbildningen är framtagen under Jägarnas Riksförbund och kursledaren är en förordnad utbildare.
-					`,	
+					main: 
+						`En jaktledaren ska ha kunskap om vilka lagar och regler som gäller vid jakt. 
+						Denne ska genom sitt uppträdande sätta den etiska och moraliska normen i jaktlaget, då det är han som är ytterst ansvarig om något skulle hända. 
+						
+						Efter genomförd utbildning erhålls ett diplom.
+						
+						Vår utbildningen är godkänd av Svea skog med flera. Svea skog har utbildningskrav på alla jaktledare för utarrenderade jaktmarker.
+					`,
+					lists: [
+						{
+							title: 'Avgiften är uppdelad i två fakturor:',
+							type: 'number',
+							items: [
+								'500 kr |(anmälningsavgift)|.',
+								'1 300 kr |(betalas 10 dagar innan kursen startar)|.'
+							]
+						},
+					],
 					schedule: [
 						[
 							{title: 'Exempel schema'},
@@ -190,8 +195,8 @@ export const articleData = {
 			content: [
 				{
 					subtitle: 'Grisjakt',
-					text: `
-						6 500 kr
+					text: 
+						`6 500 kr
 						Fredag - söndag
 						Nattjakt fredag och lördag
 						Stötjakt på söndag`,
@@ -201,8 +206,8 @@ export const articleData = {
 				},
 				{
 					subtitle: 'Bockjakt',
-					text: `
-						5 000 kr
+					text: 
+						`5 000 kr
 						Fredag - söndag
 						Passjakt fredag och lördag`,
 					photoPath: '../img/deer-900x600-min.jpg',
@@ -211,8 +216,8 @@ export const articleData = {
 				{
 					subtitle: `Rådjur & 
 					Grisjakt`,
-					text: `
-						6 500 kr
+					text: 
+						`6 500 kr
 						Fredag- söndag
 						Passjakt fredag och lördag
 						Stötjakt på söndag med hund`,
@@ -220,7 +225,8 @@ export const articleData = {
 					photoBackgroundColor: '#1a250f',
 				},
 				{
-					text: `Alla troféer tillfaller skytten, under förutsättning att man tar hand om djuret själv.
+					text: 
+						`Alla troféer tillfaller skytten, under förutsättning att man tar hand om 	djuret själv.
 
 						Vid grisjakt får den skytt som fäller en gris ta med sig djuret hem, om han så önskar.
 
@@ -236,6 +242,8 @@ export const articleData = {
 		},
 	],
 	info: 
-		`(Vid avbokning återbetalas ej anmälningsavgiften. Vid inställning av kursen återbetalas avgiften och ni som anmält er får 10% rabatt på nästa kurstillfälle.  Vid avbokning senare än 5 dagar innan kurstillfället återbetalas ej avgiften.)\n\n`,	
-	location: '(Alla kurser hålls i laholmskommun)',
+		`Utbildningen är framtagen under Jägarnas Riksförbund och kursledaren är en förordnad utbildare.
+		
+		Vid avbokning återbetalas ej anmälningsavgiften. Vid inställning av kursen återbetalas avgiften och ni som anmält er får 10% rabatt på nästa kurstillfälle.  Vid avbokning senare än 5 dagar innan kurstillfället återbetalas ej avgiften.`,	
+	location: 'Alla kurser hålls i laholmskommun',
 }

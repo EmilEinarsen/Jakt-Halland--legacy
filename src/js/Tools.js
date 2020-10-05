@@ -1,9 +1,10 @@
+import { state } from '../js/stores'
 import Restrain from 'bjork_restrain'
-import { queryTargetAll } from "./Helpers"
+
+
+import { queryTarget, queryTargetAll } from "./Helpers"
 
 export const getScreenWidth = () => window.innerWidth
-export const scrollToInstantly = options => window.scrollTo(options)
-export const getPosY = () => window.scrollY
 
 export const isInWindow = target => target.offsetTop < (window.innerHeight + window.pageYOffset)
 export function LazyImgLoading() {
@@ -43,12 +44,43 @@ export function convertdateStringIntoIntObject(string) { // converts, 20/12/2020
 		year:  parseInt(arr[2]),
 	}
 }
-export function ScrollDirection() {
-	let oldY = getPosY()
-	this.get = () => {
-		const y =  getPosY()
-		const isUp = oldY > y
-		oldY = y
-		return isUp
+export function Scroll() {
+	let oldPosY
+	let isMenuOpen
+	state.subscribe(value => {
+		isMenuOpen = value.menu
+	})
+
+	this.getPosY = () => window.scrollY
+
+	this.getDirection = () => {
+		oldPosY = oldPosY === undefined ? this.getPosY() : oldPosY
+		
+		const newPosY =  this.getPosY()
+		
+		const changeOfY = oldPosY - newPosY
+
+		oldPosY = newPosY
+
+		// -1 = down, 1 = up, 0 = unchanged
+		return changeOfY < 0 ? -1 : changeOfY > 0 ? 1 : 0
 	}
+
+	this.to = options => window.scrollTo(options)
+
+	this.toggle = () => isMenuOpen ? this.disable() : this.enable()
+	this.enable = () => {
+		overflow('auto')
+		this.to(oldPosY)
+	}
+	this.disable = () => {
+		overflow('hidden')
+	}
+	function overflow(string) {
+		[queryTarget('html'), document.body].forEach(target => {
+			target.style.overflow = string
+		})
+	}
+
+	/* $state.menu ? 'stop-scrolling' : '' */
 }

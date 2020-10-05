@@ -23,7 +23,7 @@
 		<h2>{subtitle}</h2>
 	{/if}
 	{#if text}
-		<p>{text}</p>
+		<p><br>{text}</p>
 	{/if}
 </div>
 
