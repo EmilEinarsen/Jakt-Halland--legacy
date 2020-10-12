@@ -1,7 +1,7 @@
 <script>
 
 	import { slide, fade } from 'svelte/transition'
-
+	
 	let open = false
 
 </script>
@@ -37,7 +37,8 @@ $width: 100%
 	.content
 		font-size: 20px
 		width: $width
-		margin: 20px 10px
+		margin: 20px 0
+		padding: 0 20px
 	button
 		display: grid
 		grid-auto-flow: column

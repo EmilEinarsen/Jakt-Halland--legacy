@@ -11,14 +11,15 @@
 	background-size: cover
 	background-position: center center
 	background-repeat: no-repeat
-	height: 800px
+	height: 850px
 	@include desktop
 		height: auto
 		padding: 0
 		background-image: none
 		background-color: transparent
+	transition: .5s linear
 	&.lazy
-		background-image: none
+		opacity: .7
 	& > div
 		padding: 30px 0 0 0
 		@include desktop
@@ -45,8 +46,6 @@
 			background-size: cover
 			background-position: center center
 			background-repeat: no-repeat
-			&.lazy
-				background-image: none
 			& > div
 				margin: 65px 0
 				h1, p
@@ -111,44 +110,6 @@
 				background-color: transparent
 				padding: 60px 0 0 0
 				margin: 0
-
-			input
-				height: 40px
-				width: 100%
-
-			textarea
-				width: 100%
-				overflow: hidden
-				resize: none
-				min-height: 40px
-				height: auto
-
-			input, textarea
-				background-color: darken(color(background), 3%)
-				border-radius: 2px 2px 0 0
-				font-size: 20px
-				padding: 10px
-				border-bottom: 2px solid #223D6E
-				transition: border .25s ease-in-out
-			
-			label
-				position: absolute
-				top: 11px
-				left: 9px
-				@extend %inactive-link
-				color: rgba(0, 0, 0, 0.6)
-				span
-					font-size: 12px
-					color: rgba(0, 0, 0, 0.6)
-
-			input, label
-				transition: .25s
-
-			p
-				position: absolute
-				font-size: 12px
-				margin: 2px 0 0 0 
-				color: #dc3545
 
 			& > div
 				position: relative
@@ -229,7 +190,6 @@
 				background-color: #223d6ef3
 				font-size: 15px
 				margin: 10px 0 0 0
-				transition: 0
 				@include desktop
 					color: #223D6E
 					border: 2px solid #223D6E
@@ -252,25 +212,25 @@
 					color: #ffffff
 					background-color: #28a745
 					border: 0
-					& > i:nth-child(1)
+					& > i
 						display: block
 						background-color: #28a745
 
 					&:hover
 						background-color: darken(#28a745,5%)
-						& > i:nth-child(1) 
+						& > i 
 							background-color: darken(#28a745,5%)
 			&.error
 				& > button
 					color: #ffffff
 					background-color: #dc3545
 					border: 0
-					& > i:nth-child(2)
+					& > i
 						display: block
 						font-size: 25px
 						background-color: #dc3545
 
 					&:hover
 						background-color: darken(#dc3545,5%)
-						& > i:nth-child(2) 
+						& > i
 							background-color: darken(#dc3545,5%)

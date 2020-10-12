@@ -1,28 +1,35 @@
-<script>
+<script src="../context/script.js"></script>
 
-import Event from '../components/_event.svelte'
-import List from '../components/_list.svelte'
-import Subtext from '../components/_subtext.svelte'
-
-export let body
-export let location
-export let info
-export let event
-	
-</script>
-
-
-# {body.title}
+<div class="body">
+# Intensivkurs
 						
-Pris: _{body.price}_
+Pris: _8 800 kr_
 
-<Event {location} {event} />
+<Event {event}>
+	> <Location />
+</Event>
 
-<List list={body.lists[0]} />
+<div class="list">
+	I paketet ingår:
+	* Litteratur, inklusive ljudbok, skickas till dig i förväg.,
+	* Övningsskjutning med hagel vid ett tillfälle, exklusive ammunition.
+	* Teoretiskt prov, exklusive Naturvårdsverkets provavgift.
+</div>
 
-Under utbildningen går vi igenom hela teoridelen tillsammans. Detta sker över 10 kvällar, varannan vecka mellan 18.00 - 21.00.
-Vilket ger er gott om tid att studera.
 
-<List list={body.lists[1]} />
+Under utbildningen går vi igenom hela teoridelen tillsammans. För att ge er gott om tid att studera, sker detta över 10 kvällar, varannan vecka mellan 18.00 - 21.00.
 
-<Subtext subtext={info}/>
+<div class="list">
+	Avgiften är uppdelad i två fakturor:
+	1) 2 000 kr _(anmälningsavgift)_.
+	1) 6 800 kr _(betalas 10 dagar innan kursen startar)_.
+</div>
+
+> <Info></Info>
+
+--------------------------------------------------------------------------------------------------------------------
+
+</div>
+
+
+<style src="../context/style.sass"></style>

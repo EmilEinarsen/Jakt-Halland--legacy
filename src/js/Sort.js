@@ -3,13 +3,14 @@ import { isEventInFuture } from "./Validate"
 
 export const orginizeData = datas => ({
 	events: [...datas].filter(data => (
-		isEventInFuture(data.acf.startDate)
+		data.acf.event !== 'Jakt helg' ? isEventInFuture(data.acf.startDate) : true
 	)).map(data => ({
 		event: data.acf.event,
 		info: {
 			text: data.acf.text,
 			startDate: convertdateStringIntoIntObject(data.acf.startDate),
 			endDate: convertdateStringIntoIntObject(data.acf.endDate),
+			type: data.acf.type,
 		}
 	})).sort((A, B) => compareDates(
 		A.info.startDate, 

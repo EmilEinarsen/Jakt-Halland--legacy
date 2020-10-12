@@ -1,0 +1,1 @@
+Alla kurser hålls i Laholms kommun

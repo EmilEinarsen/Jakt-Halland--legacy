@@ -5,6 +5,9 @@ $gap: 20px
 	width: 100%
 	@media (min-width: 880px)
 		display: inline-flex
+	& > div
+		@media (min-width: 880px)
+			width: 50%
 
 .gap
 	gap: $gap/4
@@ -14,6 +17,18 @@ $gap: 20px
 .flex_gap
 	@extend .flex
 	@extend .gap
+
+.flex_gap_text
+	@extend .flex
+	@extend .gap
+	max-width: 60ch
+	margin: 0 auto
+	@media (min-width: 880px)
+		max-width: 100%
+		margin: 0
+
+.btnsJagarexamen
+	@extend .flex_gap_text
 
 .article-3-bottom-thubnail-wrapper
 	margin: 0 auto

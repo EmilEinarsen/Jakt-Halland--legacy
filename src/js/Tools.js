@@ -1,5 +1,5 @@
 import { state } from '../js/stores'
-import Restrain from 'bjork_restrain'
+import { throttle } from 'bjork_restrain'
 
 
 import { queryTarget, queryTargetAll } from "./Helpers"
@@ -8,19 +8,16 @@ export const getScreenWidth = () => window.innerWidth
 
 export const isInWindow = target => target.offsetTop < (window.innerHeight + window.pageYOffset)
 export function LazyImgLoading() {
-	let loadImage = image => image.classList.remove("lazy")
-	let { throttle } = new Restrain()
+	let loadImage = img => img.classList.remove("lazy")
 
 	this.load = () => {
-		let images = [...queryTargetAll('.lazy')]
-		if(!images.length) return
-		throttle(() => {
-			images.filter(img => (
-				isInWindow(img)
-			)).forEach(img => (
-				loadImage(img)
-			))
-		}, 50)
+		let imgs = [...queryTargetAll('.lazy')]
+		if(!imgs.length) return
+		imgs.filter(img => (
+			isInWindow(img)
+		)).forEach(img => (
+			loadImage(img)
+		))
 	}
 }
 
@@ -67,18 +64,26 @@ export function Scroll() {
 	}
 
 	this.to = options => window.scrollTo(options)
+	this.toParam = param => {
+		const yOffset = -120
+		let y = queryTarget(param).getBoundingClientRect().top + window.pageYOffset + yOffset
+		window.scrollTo({top: y, behavior: 'smooth'})
+	}
+	this.toSmooth = y => window.scrollTo({top: y, behavior: 'smooth'})
+	this.toBottom = () => window.scrollTo({top: document.body.scrollHeight, behavior: 'smooth'})
+	this.toTop = () => window.scrollTo({top: 0, behavior: 'smooth'})
 
 	this.toggle = () => isMenuOpen ? this.disable() : this.enable()
 	this.enable = () => {
 		overflow('auto')
-		this.to(oldPosY)
+		this.to({top: oldPosY})
 	}
 	this.disable = () => {
 		overflow('hidden')
 	}
 	function overflow(string) {
 		[queryTarget('html'), document.body].forEach(target => {
-			target.style.overflow = string
+			target.style.overflowY = string
 		})
 	}
 

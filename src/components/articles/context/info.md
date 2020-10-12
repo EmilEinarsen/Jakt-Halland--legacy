@@ -1,0 +1,2 @@
+Utbildningen är framtagen under Jägarnas Riksförbund och kursledaren är en förordnad utbildare.<br>		
+Vid avbokning återbetalas ej anmälningsavgiften. Vid inställning av kursen återbetalas avgiften och ni som anmält er får 10% rabatt på nästa kurstillfälle.  Vid avbokning senare än 5 dagar innan kurstillfället återbetalas ej avgiften.

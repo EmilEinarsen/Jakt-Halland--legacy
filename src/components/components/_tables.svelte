@@ -1,12 +1,12 @@
 <script>
 
-	export let schedule
+	export let tables
 
 </script>
 
 
 <div>
-	{#each schedule as table}
+	{#each tables as table}
 	<table>
 		{#each table as {title, time, activity}}
 			<tr>

@@ -1,11 +1,6 @@
-<script>
-
-	export let subtext
-
-</script>
-
-
-<span>{subtext}</span>
+<span>
+	<slot />
+</span>
 
 
 <style lang="sass">

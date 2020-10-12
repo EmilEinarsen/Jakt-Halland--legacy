@@ -1,6 +1,6 @@
 <script>
 	import { fade, slide, fly } from 'svelte/transition'
-	import Restrain from 'bjork_restrain'
+	import { throttle } from 'bjork_restrain'
 
 	import { state } from '../js/stores'
 	import { isWidthMobile } from '../js/Validate'
@@ -9,7 +9,7 @@
 
 	const scroll = new Scroll()
 	const { getDirection, getPosY } = scroll
-	const { throttle } = new Restrain()
+	
 	let isMobile
 	setIsMobile()
 	let isTransparent
@@ -31,7 +31,6 @@
 		scroll.enable()
 	}
 	function onEvent()  {
-
 		// stops unintended scroll events after pagerefresh
 		// by pushing toggling of isInitialRender to callback queue
 		if(isInitialRender) {
@@ -47,7 +46,7 @@
 			setIsMobile()
 			setTransparency() 
 			setVisibility()
-		}, 300)
+		}, 100)
 	}
 	function setVisibility() {
 		let isUp
@@ -68,13 +67,13 @@
 	}
 </script>
 
-<svelte:window on:click={close} on:resize={onEvent} on:scroll={onEvent} />
+<svelte:window on:click={close} on:resize={()=> {onEvent(); scroll.enable();}} on:scroll={onEvent} />
 
 {#if isVisible || isOpen}
-	<nav id="navbar" class:isMobile class:isTransparent transition:fly="{{duration: 500, y: -150, opacity: 0.5}}">
+	<nav id="navbar" class:isMobile class:isTransparent transition:fly="{{duration: 500, y: -150, opacity: 0.7}}">
 		<div>
 			<div>
-				<div id="logo" class="logo-container">
+				<div id="logo" class="logo-container" on:click={scroll.toTop}>
 					<div class="img" alt=""></div>
 					<p>Jakt Halland</p>
 				</div>
@@ -92,11 +91,11 @@
 
 			{#if isOpen || !isMobile}
 				<ul class:isMobile class:isTransparent transition:slide="{{duration: 300, y: -150}}">
-					<li id="nav-1">Hem</li>
-					<li id="nav-2">Jägarexamen</li>
-					<li id="nav-3">Jaktledarutbildning</li>
-					<li id="nav-4">Jakt</li>
-					<li id="nav-5">Kontakta</li>
+					<li on:click={scroll.toTop}>Hem</li>
+					<li on:click={() => scroll.toParam('#article-1')}>Jägarexamen</li>
+					<li on:click={() => scroll.toParam('#article-2')}>Jaktledarutbildning</li>
+					<li on:click={() => scroll.toParam('#article-3')}>Jakt</li>
+					<li on:click={scroll.toBottom}>Kontakta</li>
 				</ul>
 				<div class:isMobile class="shadow" transition:fade="{{duration: 200}}"></div>
 			{/if}
@@ -115,8 +114,9 @@ nav
 	height: 90px
 	background: white
 	width: 100%
-	box-shadow: 0 0 10px rgba( black, .2)
+	box-shadow: 0 0 10px rgba( black, .05)
 	transition: .3s linear
+	min-width: 250px
 	&.isTransparent
 		background: transparent
 		box-shadow: 0 0 0
@@ -151,8 +151,15 @@ nav
 				display: grid
 				grid-auto-flow: column
 				align-items: center
-				gap: 20px
+				padding: 0 20px
+				margin: 0 0 0 -25px
+				@media (min-width: 450px)
+					padding: 0 0 0 20px
+					gap: 20px
 				text-transform: uppercase
+				cursor: pointer
+				&:hover
+					background: #f2f2f2
 				.img
 					background: url(../img/icon_trans_cut-80x80.png)
 					background-size: contain
@@ -160,6 +167,10 @@ nav
 					height: 50px
 					width: 50px
 				p
+					display: none
+					@media (min-width: 450px)
+						display: block
+
 					width: 8em
 
 			.menu-toggle
@@ -167,6 +178,10 @@ nav
 				justify-self: end
 				cursor: pointer
 				text-transform: uppercase
+				padding: 0 20px
+				margin: 0 -40px 0 0
+				&:hover
+					background: #f2f2f2	
 				& > div
 					display: grid
 					gap: 10px
@@ -187,14 +202,14 @@ nav
 			grid-area: one
 			position: absolute
 			top: 0
-			right: 50px
 			z-index: 6
 			background: white
 			display: flex
 			justify-content: space-between
 			align-items: center
 			transition: .3s linear
-			width: percentage(972.5/1680)
+			right: 25px
+			width: percentage(1010/1680)
 			li
 				color: #223D6E
 				height: 90px
@@ -202,6 +217,8 @@ nav
 				display: grid
 				align-items: center
 				cursor: pointer
+				font-size: 22px
+				user-select: none
 				&:hover
 					background: lighten(black, 95%)
 			&.isMobile

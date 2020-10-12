@@ -1,10 +1,8 @@
 <script>
 
 import { fade, slide } from 'svelte/transition'
-import Subtext from './_subtext.svelte';
 
 export let event
-export let location
 let noResponse = false
 
 setTimeout(() => { if(event === '') noResponse = true }, 5000)
@@ -14,17 +12,8 @@ setTimeout(() => { if(event === '') noResponse = true }, 5000)
 {#if !noResponse}
 
 <p transition:slide="{{duration: 100}}">
-	Nästa kurstillfälle: {#if event}
-		<span transition:fade>{event}</span>
-	{:else}
-		...
-	{/if}
-	<br>
-	<Subtext subtext={location} />
+	Nästa kurstillfälle: {#if event} <em transition:fade>{event}</em> {:else} ... {/if}
+	<slot />
 </p>
 
 {/if}
-
-
-<style lang="sass">
-</style>

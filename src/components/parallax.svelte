@@ -1,15 +1,20 @@
 <script>
-	import { fade } from 'svelte/transition'
+import Location from './articles/context/location.md'
+import Subtext from './components/_subtext.svelte'
+import { fade } from 'svelte/transition'
 
-	import { state } from '../js/stores'
+import { state } from '../js/stores'
 
-	import { isWidthMobile } from '../js/Validate'
-	
-	let noResponse = false
-	
-	$: events  = $state.events
+import { Scroll } from '../js/Tools'
+import { isWidthMobile } from '../js/Validate'
 
-	setTimeout(() => { if(events === undefined) noResponse = true }, 5000)
+
+
+let noResponse = false
+let scroll = new Scroll()
+$: events  = $state.events
+
+setTimeout(() => { if(events === undefined) noResponse = true }, 5000)
 </script>
 
 <div class="landing-page">
@@ -25,8 +30,8 @@
 		<div class="img"></div>
 		
         <div class="button-container">
-			<button id="parallax-1">Jägarexamen</button>
-			<button id="parallax-2">Kontakta oss</button>
+			<button on:click={() => scroll.toParam('#article-1')}>Jägarexamen</button>
+			<button on:click={scroll.toBottom}>Kontakta oss</button>
 		</div>
 
 		{#if !noResponse || isWidthMobile()}
@@ -48,7 +53,7 @@
 									Jaktledarutbildning, den {leader}.
 								{/if}
 
-								<br><span>(Alla kurserhålls i laholmskomun)</span>
+								<br><Subtext><Location /></Subtext>
 							</p>
 						{/each}
 					{:else}

@@ -1,57 +1,42 @@
 <script>
 
-import Lugn from './lugn.md'
+import Normal from './normal.md'
 import Intensiv from './intensiv.md'
+import Buttons from './buttons.md'
 
-import Body from "../components/_body.md"
-import BtnAdditionalInfo from "../components/_btnAdditionalInfo.svelte"
-import Thumbnail from "../components/_thumbnail.svelte"
+import Thumbnail from "../../components/_thumbnail.svelte"
 
-export let article
-export let events
-
-const { 
-	body,
-	thumbnail,
-	btnInfo,
-	location,
-	info,
-} = article
-
-const {
-	intensive, 
-	calm
-} = events
+export let intensive
+export let calm
 	
 </script>
 
 <article id="article-1">
-	<Thumbnail data={thumbnail} /><br>
+
+	<Thumbnail 
+		data={{
+			title: 'Jägarexamen',
+			photoPath: '../img/shooter-1200x1000-min.jpg',
+			photoBackgroundColor: '#2b2f28'
+		}}
+	/>
+
 	<div>
-		<div class="flex_gap">
+		<div class="flex_gap_text">
 			
+			<div>
+				<Normal event={calm} />
+			</div>
 			
-			<Body>
-				<Lugn body={body[0]} {location} {info} event={calm} />
-			</Body>
-			<Body>
-				<Intensiv body={body[1]} {location} {info} event={intensive} />
-			</Body>
+			<div>
+				<Intensiv event={intensive} />
+			</div>
 			
-
 		</div>
-
-		<div class="flex_gap">
 			
-			{#each btnInfo as btnInfo}
-				<BtnAdditionalInfo>
-					<span slot="name">{btnInfo.title.toUpperCase()}</span>
-					{btnInfo.text}
-				</BtnAdditionalInfo>
-			{/each}
-
-		</div>
+		<Buttons />
+		
 	</div>
 </article>
 
-<style src="../components/_article.sass"></style>
+<style src="../context/_article.sass"></style>
