@@ -11,6 +11,8 @@ Vår utbildningen är godkänd av Svea skog med flera. Svea skog har utbildnings
 
 > <Info></Info>
 
+<Intresse />
+
 <BtnAdditonalInfo>
 	<span slot="name">EXEMPEL SCHEMA</span>
 	<Tables tables={[[
@@ -24,4 +26,4 @@ Vår utbildningen är godkänd av Svea skog med flera. Svea skog har utbildnings
 </BtnAdditonalInfo>
 </div>
 
-<style src="../context/style.sass"></style>
+<style src="../context/context.sass"></style>

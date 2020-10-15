@@ -1,0 +1,2 @@
+.body{position:relative;width:100%;padding:20px 20px 0;font-size:20px;display:-ms-grid;display:grid;-ms-flex-line-pack:start;align-content:start;gap:1em}.list ul,.list ol{list-style:none;margin:-.5em 0 1em 0;padding:0 0 0 20px}.list ul>li,.list ol>li{margin:0 0 -.66em 0}.list ul li::before{content:"• ";color:grey;margin:0 .35em 0 -1em}.list ol{counter-reset:item;padding:0 0 0 20px}.list ol li::before{content:counter(item) ")";counter-increment:item;margin:0 .35em 0 -1em}blockquote{opacity:.85;font-size:.8em}
+/*# sourceMappingURL=context.css.map */

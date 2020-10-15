@@ -7,6 +7,7 @@ import { state } from '../js/stores'
 
 import { Scroll } from '../js/Tools'
 import { isWidthMobile } from '../js/Validate'
+import Ripple from './components/Ripple/Ripple.svelte'
 
 
 
@@ -30,8 +31,16 @@ setTimeout(() => { if(events === undefined) noResponse = true }, 5000)
 		<div class="img"></div>
 		
         <div class="button-container">
-			<button on:click={() => scroll.toParam('#article-1')}>Jägarexamen</button>
-			<button on:click={scroll.toBottom}>Kontakta oss</button>
+			<div on:click={() => scroll.toParam('#article-1')} class="primary">
+				<Ripple style={{height: '100%'}}>
+					Jägarexamen
+				</Ripple>
+			</div>
+			<div on:click={scroll.toBottom} class="secondary">
+				<Ripple style={{height: '100%'}}>
+					Kontakta oss
+				</Ripple>
+			</div>
 		</div>
 
 		{#if !noResponse || isWidthMobile()}
@@ -42,11 +51,11 @@ setTimeout(() => { if(events === undefined) noResponse = true }, 5000)
 							<p id="parallaxInfo" transition:fade>
 								Nästa kurstillfällen:
 								{#if intensive}
-									Intensiv Jägarexamen, den {intensive}.
+									Jägarexamen intensivkurs, den {intensive}.
 								{/if}
 
 								{#if calm}
-									Lugn Jägarexamen, den {calm}.
+									Jägarexamen normalkurs, den {calm}.
 								{/if}
 
 								{#if leader}

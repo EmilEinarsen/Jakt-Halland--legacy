@@ -137,39 +137,56 @@ $gridMaxWidth: 1680px
 				justify-content: stretch
 				min-width: auto
 
-			& > button
-				@extend %disable-higlight
-				@extend %pointer
-				width: 100%
-				font-weight: bold
-				font-size: 20px
-				@include largeTablet
-					font-size: 25px
-				@include largeDesktop
-					font-size: 30px
-			& > button:nth-child(1)
-				grid-area: button1
-				background-color: transparent
-				border: 4px solid color(background)
-				color: color(background)
-				@include largeMobile
-				@include largeTablet
-					border: 4px solid #223D6E
-					color: #223D6E
-				@include mediumDesktop
-				&:hover
-					border: 4px solid #fff
-					color: #fff
+			& > div 
+				& > button
+					@extend %disable-higlight
+					@extend %pointer
+					width: 100%
+					font-weight: bold
+					font-size: 20px
+					border-radius: 4px
 					@include largeTablet
-						border: 4px solid #223D6E
-						color: #223D6E
-			& > button:nth-child(2)
-				grid-area: button2
-				background-color: #223D6E
-				color: #fff
-				&:hover
-					background-color: color(primary-hover)
-					color: #fff
+						font-size: 25px
+					@include largeDesktop
+						font-size: 30px
+
+				&.primary
+					grid-area: button1
+					& > button
+						background-color: transparent
+						border: 4px solid color(background)
+						color: color(background)
+						@include largeMobile
+						@include largeTablet
+							border: 4px solid #223D6E
+							color: #223D6E
+						@include mediumDesktop
+						&:hover
+							border: 4px solid #fff
+							color: #fff
+							background: rgba( black, .1)
+							@include largeTablet
+								border: 4px solid #223D6E
+								color: #223d6e
+						&::before
+							@extend %font-awsome
+							content: '\f06e'
+							font-weight: 400
+							margin: 0 .5em 0 0
+						
+				&.secondary
+					grid-area: button2
+					& > button
+						background-color: #223D6E
+						color: #fff
+						&:hover
+							background-color: darken(#223D6E, 2.5%)
+							color: #fff
+						&::before
+							@extend %font-awsome
+							content: '\f0e0'
+							font-weight: 700
+							margin: 0 .5em 0 0
 
 		& > .announcement
 			z-index: 2
@@ -178,6 +195,7 @@ $gridMaxWidth: 1680px
 				display: grid
 				place-content: center
 				background-color: #37583C
+				border-radius: 4px
 				height: calc(100% + (#{$buttonHeight} / 2))
 				width: calc( 100% +  (#{$sitePaddingX}) * 2)
 				margin: calc(-#{$buttonHeight} / 2) 0 0 -#{$sitePaddingX}
@@ -192,18 +210,19 @@ $gridMaxWidth: 1680px
 					width: 100%
 					margin: -50px 0 0 -80px
 				& > p
+					display: grid
+					justify-content: center
 					margin: calc(#{$buttonHeight} / 2) 0 0 0
-					padding: 40px
+					padding: 50px 30px 50px 30px
 					color: #fff
-					font-size: 20px
-					text-align: center
+					font-size: 18px
+					max-width: 45ch
 					@include largeMobile
 						margin: 0
-						text-align: left
 						font-size: 23px
 					& > span
 						font-size: 16px
-						color: lighten( #37583C, 60%)
+						color: lighten( rgb(55, 88, 60), 60%)
 	& > .background-block
 		position: absolute
 		right: 0

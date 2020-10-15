@@ -44,7 +44,7 @@ $width: 100%
 		grid-auto-flow: column
 		text-align: left
 		width: $width
-		padding: 10px 20px
+		padding: 6px*1.5 16px
 		border-bottom: 2px solid darken(#eceff0, 20%)
 		color: #223D6E
 		background-color: #eceff0
@@ -57,11 +57,10 @@ $width: 100%
 		
 		&:hover
 			cursor: pointer
-			background-color: #eceff075
+			background-color: darken(#eceff0, 2.5%)
 
 		&:active
 			transform: scale(0.995)
-			padding: 10px 20px 11px 20px
 			border-bottom: 1px solid darken(#eceff0, 10%)
 
 		&.open::after

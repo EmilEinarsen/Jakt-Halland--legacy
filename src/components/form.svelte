@@ -4,6 +4,7 @@ import { debounce } from 'bjork_restrain'
 
 import Input from "./components/_input.svelte"
 import { queryTarget, queryTargetAll } from '../js/Helpers'
+import Ripple from './components/Ripple/Ripple.svelte'
 
 let formState = 0
 let formInputState = 0
@@ -98,14 +99,16 @@ function formSuccess() {
 			/>
 			
 			
-			<button transition:fade on:click|preventDefault={attemptDispatch}>
-				SKICKA
-				{#if success}
-					<i class="fas fa-check"></i>
-				{:else if error}
-					<i class="fas fa-times"></i>
-				{/if}
-			</button>
+			<div transition:fade on:click|preventDefault={attemptDispatch}>
+				<Ripple>
+					SKICKA
+					{#if success}
+						<i class="fas fa-check"></i>
+					{:else if error}
+						<i class="fas fa-times"></i>
+					{/if}
+				</Ripple>
+			</div>
 			
 		</form>
 

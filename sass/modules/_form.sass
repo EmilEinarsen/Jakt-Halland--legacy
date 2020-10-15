@@ -11,13 +11,13 @@
 	background-size: cover
 	background-position: center center
 	background-repeat: no-repeat
-	height: 850px
+	height: 900px
 	@include desktop
 		height: auto
 		padding: 0
 		background-image: none
 		background-color: transparent
-	transition: .5s linear
+		transition: .5s linear
 	&.lazy
 		opacity: .7
 	& > div
@@ -80,7 +80,7 @@
 			max-width: auto
 		& > div
 			display: block
-			margin: 15px 30px 0 30px
+			margin: 15px 35px 0 35px
 			@include desktop
 				display: none
 				margin: 0 0 60px 0
@@ -101,7 +101,7 @@
 			z-index: 2
 			position: relative
 			min-width: 100%
-			padding: 40px 25px 25px 25px
+			padding: 40px 35px 25px 35px
 			background-color: color(background)
 			transition: .3s
 			@include desktop
@@ -113,7 +113,7 @@
 
 			& > div
 				position: relative
-				padding: 0 0 35px 0
+				padding: 0 0 45px 0
 				&.error
 					input, textarea
 						border-bottom: 2px solid #dc3545
@@ -180,57 +180,62 @@
 				& > label
 				& > textarea
 
-			& > button
-				display: flex
-				justify-content: center
-				align-items: center
-				padding: 10px 50px
-				border-radius: 5px
-				color: #fff
-				background-color: #223d6ef3
-				font-size: 15px
-				margin: 10px 0 0 0
-				@include desktop
-					color: #223D6E
-					border: 2px solid #223D6E
-					background-color: transparent
-					margin: 0
-					font-size: 20px
-				&:hover
-					background-color: color(primary)
+			& > div 
+				& > button
+					display: flex
+					justify-content: center
+					align-items: center
+					padding: 10px 50px
+					border-radius: 5px
 					color: #fff
-					@extend %pointer
-				&:active
-					transform: scale(0.99)
-				i
-					display: none
-					position: absolute
-					width: 75px
+					background-color: #223d6ef3
+					font-size: 15px
+					margin: 10px 0 0 0
+					border: 2px solid #223D6E
+					@include desktop
+						color: #223D6E
+						background-color: transparent
+						margin: 0
+						font-size: 20px
+					&:hover
+						background-color: color(primary)
+						color: #fff
+						@extend %pointer
+					&:active
+						transform: scale(0.99)
+					i
+						display: none
+						position: absolute
+						width: 75px
+					&::before
+						@extend %font-awsome
+						content: '\f1d8'
+						font-weight: 700
+						margin: 0 .5em 0 0
 
 			&.success
-				& > button
-					color: #ffffff
-					background-color: #28a745
-					border: 0
-					& > i
-						display: block
+				& > div 
+					& > button
+						color: transparent
 						background-color: #28a745
+						border: 2px solid #28a745
+						& > i
+							display: block
+							color: #ffffff
 
-					&:hover
-						background-color: darken(#28a745,5%)
-						& > i 
+						&:hover
 							background-color: darken(#28a745,5%)
 			&.error
-				& > button
-					color: #ffffff
-					background-color: #dc3545
-					border: 0
-					& > i
-						display: block
-						font-size: 25px
+				& > div 
+					& > button
+						color: transparent
 						background-color: #dc3545
-
-					&:hover
-						background-color: darken(#dc3545,5%)
+						border: 2px solid #dc3545
 						& > i
+							display: block
+							font-size: 25px
+							color: #ffffff
+
+						&:hover
 							background-color: darken(#dc3545,5%)
+							& > i

@@ -11,13 +11,14 @@ Pris: _8 800 kr_
 
 <div class="list">
 	I paketet ingår:
-	* Litteratur, inklusive ljudbok, skickas till dig i förväg.,
-	* Övningsskjutning med hagel vid ett tillfälle, exklusive ammunition.
-	* Teoretiskt prov, exklusive Naturvårdsverkets provavgift.
+	* Litteratur, inklusive ljudbok, skickas till dig i förväg.
+	* Övningsskjutning med hagel.
+	* Praktiskt prov, kula och hagel.
+	* Teoretiskt prov, inklusive Naturvårdsverkets provavgift.
+	* Hotellövernattning torsdag till söndag, med helpension i dubbelrum (enkelrumstillägg 500 kr per natt. restaurangen är öppen och möjlighet att äta lunch finns, ingår ej i paketet).
 </div>
 
-
-Under utbildningen går vi igenom hela teoridelen tillsammans. För att ge er gott om tid att studera, sker detta över 10 kvällar, varannan vecka mellan 18.00 - 21.00.
+Under ett samlat pris kommer du lära dig allt som behövs för att ta jägarexamen, på 3.5 dagar (torsdag till söndag).
 
 <div class="list">
 	Avgiften är uppdelad i två fakturor:
@@ -27,9 +28,11 @@ Under utbildningen går vi igenom hela teoridelen tillsammans. För att ge er go
 
 > <Info></Info>
 
+<Intresse />
+
 --------------------------------------------------------------------------------------------------------------------
 
 </div>
 
 
-<style src="../context/style.sass"></style>
+<style src="../context/context.sass"></style>

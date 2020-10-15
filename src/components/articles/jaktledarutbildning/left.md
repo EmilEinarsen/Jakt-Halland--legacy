@@ -25,4 +25,4 @@ Dess syfte är att både ge kunskap om vad som krävs som jaktledare och för at
 
 </div>
 
-<style src="../context/style.sass"></style>
+<style src="../context/context.sass"></style>
