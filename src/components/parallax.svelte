@@ -5,14 +5,11 @@ import { fade } from 'svelte/transition'
 
 import { state } from '../js/stores'
 
-import { Scroll } from '../js/Tools'
 import { isWidthMobile } from '../js/Validate'
 import Ripple from './components/Ripple/Ripple.svelte'
-
-
+import { scrollto, scrolltobottom } from 'svelte-scrollto';
 
 let noResponse = false
-let scroll = new Scroll()
 $: events  = $state.events
 
 setTimeout(() => { if(events === undefined) noResponse = true }, 5000)
@@ -31,12 +28,12 @@ setTimeout(() => { if(events === undefined) noResponse = true }, 5000)
 		<div class="img"></div>
 		
         <div class="button-container">
-			<div on:click={() => scroll.toParam('#article-1')} class="primary">
+			<div use:scrollto={'#article-1'} use:close class="primary">
 				<Ripple style={{height: '100%'}}>
 					Jägarexamen
 				</Ripple>
 			</div>
-			<div on:click={scroll.toBottom} class="secondary">
+			<div use:scrollto={'.form'} use:close class="secondary">
 				<Ripple style={{height: '100%'}}>
 					Kontakta oss
 				</Ripple>

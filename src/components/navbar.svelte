@@ -1,11 +1,13 @@
 <script>
 	import { fade, slide, fly } from 'svelte/transition'
 	import { throttle } from 'bjork_restrain'
+	import { scrollToTop, scrollTo } from "svelte-scrollto"
 
 	import { state } from '../js/stores'
 	import { isWidthMobile } from '../js/Validate'
 	import { Scroll } from '../js/Tools'
 	import { targetId } from '../js/Helpers';
+import { element } from 'svelte/internal'
 
 	const scroll = new Scroll()
 	const { getDirection, getPosY } = scroll
@@ -73,7 +75,7 @@
 	<nav id="navbar" class:isMobile class:isTransparent transition:fly="{{duration: 500, y: -150, opacity: 0.7}}">
 		<div>
 			<div>
-				<div id="logo" class="logo-container" on:click={scroll.toTop}>
+				<div id="logo" class="logo-container" on:click={scrollToTop}>
 					<div class="img" alt=""></div>
 					<p>Jakt Halland</p>
 				</div>
@@ -91,11 +93,11 @@
 
 			{#if isOpen || !isMobile}
 				<ul class:isMobile class:isTransparent transition:slide="{{duration: 300, y: -150}}">
-					<li on:click={scroll.toTop}>Hem</li>
-					<li on:click={() => scroll.toParam('#article-1')}>Jägarexamen</li>
-					<li on:click={() => scroll.toParam('#article-2')}>Jaktledarutbildning</li>
-					<li on:click={() => scroll.toParam('#article-3')}>Jakt</li>
-					<li on:click={scroll.toBottom}>Kontakta</li>
+					<li on:click={scrollToTop}>Hem</li>
+					<li on:click={() => scrollTo({element: '#article-1'})}>Jägarexamen</li>
+					<li on:click={() => scrollTo({element: '#article-2'})}>Jaktledarutbildning</li>
+					<li on:click={() => scrollTo({element: '#article-3'})}>Jakt</li>
+					<li on:click={() => scrollTo({element: '.form'})}>Kontakta</li>
 				</ul>
 				<div class:isMobile class="shadow" transition:fade="{{duration: 200}}"></div>
 			{/if}

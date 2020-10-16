@@ -1,10 +1,9 @@
 <script>
 	
 import Button from '../../components/_button.svelte'
-import { Scroll } from '../../../js/tools'
-const scroll = new Scroll()
+import { scrollTo } from 'svelte-scrollto'
 
-const handleClick = scroll.toBottom
+const handleClick = () => scrollTo({element: '.form'})
 
 </script>
 

@@ -63,15 +63,12 @@ export function Scroll() {
 		return changeOfY < 0 ? -1 : changeOfY > 0 ? 1 : 0
 	}
 
-	this.to = options => window.scrollTo(options)
+	
 	this.toParam = param => {
 		const yOffset = -120
 		let y = queryTarget(param).getBoundingClientRect().top + window.pageYOffset + yOffset
-		window.scrollTo({top: y, behavior: 'smooth'})
+		window.scrollIntoView({top: y, behavior: 'smooth'})
 	}
-	this.toSmooth = y => window.scrollTo({top: y, behavior: 'smooth'})
-	this.toBottom = () => window.scrollTo({top: document.body.scrollHeight, behavior: 'smooth'})
-	this.toTop = () => window.scrollTo({top: 0, behavior: 'smooth'})
 
 	this.toggle = () => isMenuOpen ? this.disable() : this.enable()
 	this.enable = () => {
@@ -86,6 +83,4 @@ export function Scroll() {
 			target.style.overflowY = string
 		})
 	}
-
-	/* $state.menu ? 'stop-scrolling' : '' */
 }
