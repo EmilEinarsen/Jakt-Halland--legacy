@@ -46,7 +46,7 @@ $gridMaxWidth: 1680px
 
 		& > div:not(.background-block)
 			position: relative
-			
+
 		& > header
 			grid-area: header
 
@@ -122,7 +122,7 @@ $gridMaxWidth: 1680px
 				grid-template-areas: "button1 button2"
 				grid-template-columns: 45% 45%
 				grid-template-rows: $buttonHeight
-				justify-content: space-between 
+				justify-content: space-between
 				align-content: auto
 				align-self: center
 				min-width: 500px
@@ -137,7 +137,7 @@ $gridMaxWidth: 1680px
 				justify-content: stretch
 				min-width: auto
 
-			& > div 
+			& > div
 				& > button
 					@extend %disable-higlight
 					@extend %pointer
@@ -173,7 +173,7 @@ $gridMaxWidth: 1680px
 							content: '\f06e'
 							font-weight: 400
 							margin: 0 .5em 0 0
-						
+
 				&.secondary
 					grid-area: button2
 					& > button
@@ -196,19 +196,16 @@ $gridMaxWidth: 1680px
 				place-content: center
 				background-color: #37583C
 				border-radius: 4px
-				height: calc(100% + (#{$buttonHeight} / 2))
 				width: calc( 100% +  (#{$sitePaddingX}) * 2)
 				margin: calc(-#{$buttonHeight} / 2) 0 0 -#{$sitePaddingX}
 				@include largeMobile
-					height: calc( 100% + 50px )
 					width: percentage(500/760)
 					margin: -50px 0 0 0
 					justify-content: start
 					align-content: center
 				@include largeTablet
-					height: 150%
 					width: 100%
-					margin: -50px 0 0 -80px
+					margin: -100px 0 0 -80px
 				& > p
 					display: grid
 					justify-content: center
@@ -220,6 +217,7 @@ $gridMaxWidth: 1680px
 					@include largeMobile
 						margin: 0
 						font-size: 23px
+						max-width: 100%
 					& > span
 						font-size: 16px
 						color: lighten( rgb(55, 88, 60), 60%)
@@ -243,4 +241,3 @@ $gridMaxWidth: 1680px
 			width: percentage(770/1920)
 		@include largeDesktop
 			height: 100vh
-				
