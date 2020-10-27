@@ -7,7 +7,7 @@ import { state } from '../js/stores'
 
 import { isWidthMobile } from '../js/Validate'
 import Ripple from './components/Ripple/Ripple.svelte'
-import { scrollto, scrolltobottom } from 'svelte-scrollto';
+import { scrollto } from 'svelte-scrollto';
 
 let noResponse = false
 $: events  = $state.events
@@ -28,12 +28,12 @@ setTimeout(() => { if(events === undefined) noResponse = true }, 5000)
 		<div class="img"></div>
 		
         <div class="button-container">
-			<div use:scrollto={'#article-1'} use:close class="primary">
+			<div use:scrollto={'#article-1'} class="primary">
 				<Ripple style={{height: '100%'}}>
 					Jägarexamen
 				</Ripple>
 			</div>
-			<div use:scrollto={'.form'} use:close class="secondary">
+			<div use:scrollto={'.form'} class="secondary">
 				<Ripple style={{height: '100%'}}>
 					Kontakta oss
 				</Ripple>
