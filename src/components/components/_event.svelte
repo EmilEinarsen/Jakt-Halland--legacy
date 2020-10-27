@@ -19,7 +19,7 @@ setTimeout(() => { if(event === '') noResponse = true }, 5000)
 	Nästa kurstillfälle: {#if event} <em transition:fade>{@html !full ? event : `<s style="opacity: .7;">${event}</s>` }</em> {:else} ... {/if}
 	{#if full}
 		<br><Subtext>
-			Kursen är full. Om det finns intresse öppnar vi en ny kurs och återkommer om ett preliminärt datum.
+			Kursen är full. Om det finns intresse öppnar vi en ny kurs och återkommer med ett preliminärt datum.
 		</Subtext>
 	{:else}
 		<slot />
