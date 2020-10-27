@@ -1,5 +1,5 @@
 <script>
-import { scrollto } from 'svelte-scrollto';
+import { scrollTo } from 'svelte-scrollto';
 
 let content = [
 	{ 
@@ -20,7 +20,7 @@ let content = [
 
 <div class="thumbnail-container">
 	{#each content as { title, text }, index}
-		<div use:scrollto={`#article-${++index}`} class="lazy">
+		<div on:click={() => scrollTo({element: `#article-${++index}`})} class="lazy">
 			<div>
 				<p>{title}</p>
 				<span></span>
