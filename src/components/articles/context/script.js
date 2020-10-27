@@ -8,3 +8,4 @@ import Intresse from '../context/intresse.md'
 
 export let info
 export let event
+export let data

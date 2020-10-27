@@ -5,7 +5,7 @@
 						
 Pris: _8 800 kr_
 
-<Event {event}>
+<Event {event} {data} > 
 	> <Location />
 </Event>
 
@@ -30,9 +30,8 @@ Under ett samlat pris kommer du lära dig allt som behövs för att ta jägarexa
 
 <Intresse />
 
---------------------------------------------------------------------------------------------------------------------
+---
 
 </div>
-
 
 <style src="../context/context.sass"></style>

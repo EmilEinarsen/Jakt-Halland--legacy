@@ -7,7 +7,7 @@
 
   import { isWidthMobile } from "../js/Validate";
   import Ripple from "./components/Ripple/Ripple.svelte";
-  import { scrollto, scrolltobottom } from "svelte-scrollto";
+  import { scrollto } from "svelte-scrollto";
 
   let noResponse = false;
   $: events = $state.events;
@@ -20,6 +20,25 @@
 <div class="landing-page">
   <div>
     <header />
+
+    <div class="text-container">
+      <p>Din guide till jakt i Halland</p>
+      <span />
+      <p>
+        Vi hjälper dig att ta jägarexamen, bli jaktledare och jaga i Halland
+      </p>
+    </div>
+
+    <div class="img" />
+
+    <div class="button-container">
+      <div use:scrollto={'#article-1'} class="primary">
+        <Ripple style={{ height: '100%' }}>Jägarexamen</Ripple>
+      </div>
+      <div use:scrollto={'.form'} class="secondary">
+        <Ripple style={{ height: '100%' }}>Kontakta oss</Ripple>
+      </div>
+    </div>
 
     <div class="text-container">
       <p>Din guide till jakt i Halland</p>

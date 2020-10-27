@@ -10,6 +10,7 @@ export const orginizeData = datas => ({
 			text: data.acf.text,
 			startDate: convertdateStringIntoIntObject(data.acf.startDate),
 			endDate: convertdateStringIntoIntObject(data.acf.endDate),
+			full: data.acf.full,
 			type: data.acf.type,
 		}
 	})).sort((A, B) => compareDates(

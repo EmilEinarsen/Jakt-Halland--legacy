@@ -1,20 +1,20 @@
 <script>
+  import { state } from "../js/stores";
 
-import { state } from '../js/stores'
+  import Jagarexamen from "./articles/jagarexamen/jagarexamen.svelte";
+  import Leadership from "./articles/jaktledarutbildning/jaktledarutbildning.svelte";
+  import JaktIHalland from "./articles/jaktihalland/jaktihalland.svelte";
 
-import Jagarexamen from './articles/jagarexamen/jagarexamen.svelte'
-import Leadership from './articles/jaktledarutbildning/jaktledarutbildning.svelte'
-import JaktIHalland from './articles/jaktihalland/jaktihalland.svelte'
+  $: events = $state.events;
+  $: eventData = $state.eventData;
 
-$: events = $state.events
-
-$: [{intensive, calm, leader, weekend}] = events ? events : [{}]
-
+  $: [{ intensive, calm, leader, weekend }] = events ? events : [{}];
+  $: [{ intensive: intensiveData, calm: calmData, leader: leaderData, weekend: weekendData }] = eventData ? [eventData] : [{}]
+ 
 </script>
 
+<Jagarexamen {intensive} {calm} data={{ intensiveData, calmData }} />
 
-<Jagarexamen {intensive} {calm} />
+<Leadership {leader} data={leaderData} />
 
-<Leadership {leader} />
-
-<JaktIHalland {weekend}/>
+<JaktIHalland {weekend} />

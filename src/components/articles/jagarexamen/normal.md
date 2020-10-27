@@ -5,7 +5,7 @@
 						
 Pris: _4 000 kr_
 
-<Event {event}>
+<Event {event} {data} >
 	> <Location />
 </Event>
 

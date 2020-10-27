@@ -3,7 +3,7 @@
 <div class="body">
 Pris: _1 800kr_
 
-<Event {event}>
+<Event {event} {data} >
 	> <Location />
 </Event>
 
