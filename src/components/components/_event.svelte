@@ -6,11 +6,9 @@ import Subtext from './_subtext.svelte'
 export let event
 export let data
 let noResponse = false
-
-$: full = data ? data[0].info.full : false
-
+$: full = data?.[0]?.info.full ?? false
 setTimeout(() => { if(event === '') noResponse = true }, 5000)
-
+$: console.log(event)
 </script>
 
 {#if !noResponse}
