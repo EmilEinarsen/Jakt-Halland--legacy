@@ -21,10 +21,7 @@ export const isInputValid = (id, input) => {
 		if(input.split(/(\W)/).length !== 5) return -1
 	}
 	if(id === 'phonenumber' && input) {
-		if(!(
-			input.match(/^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/) 
-			|| input.match(/^\(?[+]?([0-9]{4})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/)
-		)) return -1
+		if(/[a-öA-Ö]+$/g.test(input)) return -1
 	}
 	return input ? 1 : 0
 }

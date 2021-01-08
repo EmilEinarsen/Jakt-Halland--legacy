@@ -11,13 +11,13 @@ Pris: _4 000 kr_
 
 <div class="list">
 	I paketet ingår:
-	* Litteratur, inklusive ljudbok, skickas till dig i förväg.,
+	* Litteratur, inklusive ljudbok, skickas till dig i förväg.
 	* Övningsskjutning med hagel vid ett tillfälle, exklusive ammunition.
 	* Teoretiskt prov, exklusive Naturvårdsverkets provavgift.
 </div>
 
 
-Under utbildningen går vi igenom hela teoridelen tillsammans. För att ge er gott om tid att studera, sker detta över 10 kvällar, varannan vecka mellan 18.00 - 21.00.
+Under utbildningen går vi igenom hela teoridelen tillsammans. För att ge er gott om tid att studera, sker detta över 10 kvällar en dag i vecka mellan 18.00 - 21.00, med semester uppehåll under Juli månad.
 
 
 <div class="list">

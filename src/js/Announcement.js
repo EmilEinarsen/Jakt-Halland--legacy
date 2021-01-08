@@ -7,15 +7,9 @@ export const structureApprouchingEvents = ({intensive, leader, calm, weekend, ot
 		intensive.length === 0 ? ''
 		: intensive.length === 1 ? produceDateString(intensive[0], abbriviation) 
 		: `${produceDateString(intensive[0], abbriviation)} och ${produceDateString(intensive[1], abbriviation)}`,
-<<<<<<< HEAD
 	leader: leader[0] ? produceDateString(leader[0], abbriviation) : '',
 	calm: calm[0] ? produceDateString(calm[0], abbriviation) : '',
 	weekend: weekend.length ? structureWeekend(weekend, true) : {},
-=======
-	leader: produceDateString(leader[0], abbriviation),
-	calm: calm?.[0] ? produceDateString(calm[0], abbriviation) : '',
-	weekend: structureWeekend(weekend, true),
->>>>>>> a4ebb1018edd6f29cd5ba6f07a00500f3754d388
 	other: other[0] ? produceDateString(other[0], abbriviation) : ''
 })
 
