@@ -3,7 +3,7 @@
 <div class="body">
 # Intensivkurs
 						
-Pris: _8 800 kr_
+Pris: _9 800 kr_
 
 <Event {event} {data} > 
 	> <Location />
@@ -23,7 +23,7 @@ Under ett samlat pris kommer du lära dig allt som behövs för att ta jägarexa
 <div class="list">
 	Avgiften är uppdelad i två fakturor:
 	1) 2 000 kr _(anmälningsavgift)_.
-	1) 6 800 kr _(betalas 10 dagar innan kursen startar)_.
+	1) 7 800 kr _(betalas 10 dagar innan kursen startar)_.
 </div>
 
 > <Info></Info>
