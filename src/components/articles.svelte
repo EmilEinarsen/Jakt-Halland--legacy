@@ -8,12 +8,12 @@
   $: events = $state.events;
   $: eventData = $state.eventData;
 
-  $: [{ intensive, calm, leader, weekend }] = events ? events : [{}];
-  $: [{ intensive: intensiveData, calm: calmData, leader: leaderData, weekend: weekendData }] = eventData ? [eventData] : [{}]
+  $: [{ intensive, summer, calm, leader, weekend }] = events ? events : [{}];
+  $: [{ intensive: intensiveData, summer: summerData, calm: calmData, leader: leaderData, weekend: weekendData }] = eventData ? [eventData] : [{}]
  
 </script>
 
-<Jagarexamen {intensive} {calm} data={{ intensiveData, calmData }} />
+<Jagarexamen {intensive} {summer} {calm} data={{ intensiveData, summerData, calmData }} />
 
 <Leadership {leader} data={leaderData} />
 

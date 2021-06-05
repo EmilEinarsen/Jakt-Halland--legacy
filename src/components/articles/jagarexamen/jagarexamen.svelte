@@ -1,17 +1,18 @@
 <script>
-  import Normal from "./normal.md";
-  import Intensiv from "./intensiv.md";
-  import SommarIntensiv from "./sommarIntensiv.md";
-  import Buttons from "./buttons.md";
+  import Normal from "./normal.md"
+  import Intensiv from "./intensiv.md"
+  import SommarIntensiv from "./sommarIntensiv.md"
+  import Buttons from "./buttons.md"
 
-  import Thumbnail from "../../components/_thumbnail.svelte";
-import Divider from "../../components/Divider.svelte";
+  import Thumbnail from "../../components/_thumbnail.svelte"
+import Divider from "../../components/Divider.svelte"
 
-  export let intensive;
-  export let calm;
+  export let intensive
+  export let calm
+  export let summer
 
-  export let data;
-  $: [{ intensiveData, calmData }] = [data];
+  export let data
+  $: [{ intensiveData, calmData, summerData }] = [data]
 </script>
 
 <style src="../context/_article.sass">
@@ -37,7 +38,7 @@ import Divider from "../../components/Divider.svelte";
 
 		<div class="flex_gap_text padding-top-s">
 			<div>
-				<SommarIntensiv />
+				<SommarIntensiv event={summer} data={summerData} />
 			</div>
 		</div>
 	</div>

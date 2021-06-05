@@ -19,11 +19,12 @@ export const orginizeData = datas => ({
 	))
 })
 export const sortDataByEvent = ({events}) => (events.reduce(
-	([intensive, leader, calm, weekend, other], event) => (
-		event.event === "Jägarexamen (Intensiv)" ? [[...intensive, event], leader, calm, weekend, other]
+	([intensive, summer, leader, calm, weekend, other], event) => (
+		event.event === "Jägarexamen (Intensiv)" ? [[...intensive, event], summer, leader, calm, weekend, other] 
+		: event.event === "Jägarexamen (Sommar intensiv)" ? [intensive, [...summer, event], leader, calm, weekend, other] 
 		: event.event === "Jaktledarutbildning" ? [intensive, [...leader, event], calm, weekend, other]
-		: event.event === "Jägarexamen (Lugn)" ? [intensive, leader, [...calm, event], weekend, other]
-		: event.event === "Jakt helg" ? [intensive, leader, calm, [...weekend, event], other]
-		: [intensive, leader, calm, weekend, [...other, event]]
-	), [[], [], [], [], []]
+		: event.event === "Jägarexamen (Lugn)" ? [intensive, summer, leader, [...calm, event], weekend, other]
+		: event.event === "Jakt helg" ? [intensive, summer, leader, calm, [...weekend, event], other]
+		: [intensive, summer, leader, calm, weekend, [...other, event]]
+	), [[], [], [], [], [], []]
 ))
