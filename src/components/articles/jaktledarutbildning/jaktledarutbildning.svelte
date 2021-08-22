@@ -16,7 +16,7 @@ export let leader
 				photoPath: '../img/hunter-1200x1000-min.jpg',
 				photoBackgroundColor: '#44413f',
 		}}
-	/><br>
+	/>
 	<div>
 		<div class="flex_gap_text">
 

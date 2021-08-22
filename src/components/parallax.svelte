@@ -49,9 +49,9 @@
                 Nästa kurstillfällen:
                 {#if intensive}Jägarexamen intensivkurs, den {intensive}.{/if}
 
-                {#if calm}Jägarexamen normalkurs, den {calm}.{/if}
+                {#if calm}Jägarexamen normalkurs, den {calm}.<br />{/if}
 
-                {#if leader}Jaktledarutbildning, den {leader}.{/if}
+                {#if leader}Jaktledarutbildning, den {leader}.<br />{/if}
 
                 <br />
                 <Subtext>

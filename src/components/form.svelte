@@ -63,7 +63,7 @@ function formSuccess() {
 		<div class="lazy">
 			<div>
 				<h1>KONTAKTA OSS</h1>
-				<p>Tveka inte, ställ frågor och anmäl intresse</p>
+				<p>Ställ frågor och anmäl intresse</p>
 				<p><i class="fas fa-envelope"></i> info@jakthalland.se</p>
 			</div>
 		</div>
@@ -71,7 +71,7 @@ function formSuccess() {
 
 	<div>
 		<div>
-			<p>Tveka inte, ställ frågor och anmäl intresse</p>
+			<p>Ställ frågor och anmäl intresse</p>
 			<p><i class="fas fa-envelope"></i> info@jakthalland.se</p>
 		</div>
 		

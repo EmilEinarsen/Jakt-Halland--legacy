@@ -14,6 +14,7 @@ Pris: _4 000 kr_
 	* Litteratur, inklusive ljudbok, skickas till dig i förväg.
 	* Övningsskjutning med hagel vid ett tillfälle, exklusive ammunition.
 	* Teoretiskt prov, exklusive Naturvårdsverkets provavgift.
+	* Skjutning i skjutsimulator.
 </div>
 
 

@@ -9,7 +9,7 @@
   "devDependencies": {
     "@rollup/plugin-commonjs": "^14.0.0",
     "@rollup/plugin-node-resolve": "^8.0.0",
-    "pug": "^3.0.0",
+    "pug": "^3.0.2",
     "pug2svelte": "0.0.2-alpha.9",
     "rollup": "^2.29.0",
     "rollup-plugin-livereload": "^2.0.0",
@@ -24,7 +24,7 @@
     "bjork_restrain": "^2.0.12",
     "global": "^4.4.0",
     "marked": "^1.2.0",
-    "postcss": "^8.1.1",
+    "postcss": "^8.3.6",
     "sass": "^1.27.0",
     "sirv-cli": "^1.0.0",
     "svelte-preprocess": "^4.5.1"

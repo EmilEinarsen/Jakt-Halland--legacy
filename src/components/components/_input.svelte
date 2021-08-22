@@ -16,9 +16,9 @@ const {
 } = data
 
 let feedback = {
-	name: `För- och efternamn`,
+	name: `Namn är obligatoriskt`,
 	email: `Måste innehålla "@" och "."`, 
-	message: `Du saknar ett meddelande`,
+	message: `Meddelande är obligatoriskt`,
 	phonenumber: `Ogiltigt telefonmnummer`
 }
 function validate(e) {
@@ -82,4 +82,4 @@ function toggleFocus(e) {
 		font-size: 12px
 		margin: 2px 0 0 0 
 		color: #dc3545
-	</style>
+</style>

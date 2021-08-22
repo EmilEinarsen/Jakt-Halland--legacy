@@ -6,8 +6,13 @@ export const structureApprouchingEvents = ({intensive, summer, leader, calm, wee
 	intensive: 
 		intensive.length === 0 ? ''
 		: intensive.length === 1 ? produceDateString(intensive[0], abbriviation) 
-		: `${produceDateString(intensive[0], abbriviation)} och ${produceDateString(intensive[1], abbriviation)}`,
-	summer: summer[0] ? produceDateString(summer[0], abbriviation) : '',
+		: intensive.length === 2 ? `${produceDateString(intensive[0], abbriviation)} och ${produceDateString(intensive[1], abbriviation)}`
+		: `${produceDateString(intensive[0], abbriviation)}, ${produceDateString(intensive[1], abbriviation)} och ${produceDateString(intensive[2], abbriviation)}`
+	,
+	summer: summer.length === 0 ? ''
+		: summer.length === 1 ? produceDateString(summer[0], abbriviation) 
+		: `${produceDateString(summer[0], abbriviation)} och ${produceDateString(summer[1], abbriviation)}`
+	,
 	leader: leader[0] ? produceDateString(leader[0], abbriviation) : '',
 	calm: calm[0] ? produceDateString(calm[0], abbriviation) : '',
 	weekend: weekend.length ? structureWeekend(weekend, true) : {},
@@ -36,7 +41,7 @@ export const combineDatesBasedOnMonthAndDate = (startDate, endDate, abbriviation
 			return startDate.date === endDate.date ? `${startDate.date} ${startMonth}` 
 			: `${startDate.date}-${endDate.date} ${startMonth}`
 		else return `${startDate.date} ${startMonth}-${endDate.date} ${numberToMonth(endDate.month, abbriviation)}`
-	else return `${startDate.date} ${startMonth} ${startDate.year} -${endDate.date} ${numberToMonth(endDate.month, abbriviation)} ${endDate.year}`
+	else return `${startDate.date} ${startMonth} ${startDate.year}-${endDate.date} ${numberToMonth(endDate.month, abbriviation)} ${endDate.year}`
 }
 
 export const numberToMonth = (number, abbriviation) => abbriviation ? monthAbbriviations[number-1] : months[number-1]
