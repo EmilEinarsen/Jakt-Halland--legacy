@@ -59,12 +59,13 @@
 					font-size: 20px
 					color: #bbb
 					max-width: 300px
-				& > p:nth-child(2)
-					margin: 0 0 20px 0
-				& > p:nth-child(3)
+				& > :not(p:nth-child(1))
+					margin: 0 0 10px 0
 					i
 						padding: 0 10px 0 0
 						color: #3a4c6e
+				& > p:nth-child(2)
+					margin: 0 0 20px 0
 
 	& > div:nth-child(2)
 		display: flex
@@ -90,9 +91,10 @@
 				font-weight: bold
 				color: #223d6e
 				margin: 0 0 10px 0
-			& > p:nth-child(2)
+			& > :not(p:nth-child(1))
 				font-size: 20px
 				color: #223d6ee1
+				margin: 0 0 10px 0
 				i
 					padding: 0 5px 0 0
 					color: #3a4c6e

@@ -65,6 +65,7 @@ function formSuccess() {
 				<h1>KONTAKTA OSS</h1>
 				<p>Ställ frågor och anmäl intresse</p>
 				<p><i class="fas fa-envelope"></i> info@jakthalland.se</p>
+				<p>Östertullsgatan 9, Laholm</p>
 			</div>
 		</div>
 	</div>
@@ -73,6 +74,7 @@ function formSuccess() {
 		<div>
 			<p>Ställ frågor och anmäl intresse</p>
 			<p><i class="fas fa-envelope"></i> info@jakthalland.se</p>
+			<p>Östertullsgatan 9, Laholm</p>
 		</div>
 		
 		<form class:success class:error id="form" action="https://formspree.io/f/mqkyjrro" method="POST"> 
