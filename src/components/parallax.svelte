@@ -11,7 +11,7 @@
 
   let noResponse = false;
   $: events = $state.events;
-
+	
   setTimeout(() => {
     if (events === undefined) noResponse = true;
   }, 5000);

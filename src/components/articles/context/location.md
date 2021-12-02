@@ -1,1 +1,1 @@
-Alla kurser hålls i Laholms kommun
+Alla kurser hålls i Laholm / Halmstad

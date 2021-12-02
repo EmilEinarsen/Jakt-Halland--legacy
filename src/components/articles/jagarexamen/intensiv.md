@@ -20,12 +20,12 @@ Pris: _9 800 kr_
 </div>
 
 Under ett samlat pris kommer du lära dig allt som behövs för att ta jägarexamen, på 3.5 dagar (torsdag till söndag). 
-Kursen startar på fredagen klockan 9,00 och avslutas på söndagen vid 16,00.
+Kursen startar på torsdag klockan 13,00 och avslutas på söndag vid 16,00.
 
 <div class="list">
 	Avgiften är uppdelad i två fakturor:
 	1) 2 000 kr _(anmälningsavgift)_.
-	2) 6 800 kr _(betalas 10 dagar innan kursen startar)_.
+	2) 7 800 kr _(betalas 10 dagar innan kursen startar)_.
 </div>
 
 > Vill ni ha hjälp med boende så kan vi hjälpa till med det.

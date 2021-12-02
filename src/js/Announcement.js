@@ -13,10 +13,15 @@ export const structureApprouchingEvents = ({intensive, summer, leader, calm, wee
 		: summer.length === 1 ? produceDateString(summer[0], abbriviation) 
 		: `${produceDateString(summer[0], abbriviation)} och ${produceDateString(summer[1], abbriviation)}`
 	,
-	leader: leader[0] ? produceDateString(leader[0], abbriviation) : '',
-	calm: calm[0] ? produceDateString(calm[0], abbriviation) : '',
+	leader: leader.length === 0 ? '' 
+		: produceDateString(leader[0], abbriviation)
+	,
+	calm: calm.length === 0 ? '' 
+		: calm.length === 1 ? produceDateString(calm[0], abbriviation)
+		: calm.length === 2 ? `${produceDateString(calm[0], abbriviation)} och ${produceDateString(calm[1], abbriviation)}`
+		: `${produceDateString(calm[0], abbriviation)}, ${produceDateString(calm[1], abbriviation)} och ${produceDateString(calm[2], abbriviation)}`
+	,
 	weekend: weekend.length ? structureWeekend(weekend, true) : {},
-	other: other[0] ? produceDateString(other[0], abbriviation) : ''
 })
 
 function structureWeekend(weekend, abbriviation) {

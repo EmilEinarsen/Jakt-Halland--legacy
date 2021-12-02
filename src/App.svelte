@@ -27,6 +27,7 @@
   async function data() {
     try {
       eventData = await getEvents();
+			console.log(eventData)
       events = [structureApprouchingEvents(eventData)];
     } catch (error) {
       console.log(error);
