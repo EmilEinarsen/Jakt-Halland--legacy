@@ -24,17 +24,18 @@
     <div class="text-container">
       <p>Din guide till jakt i Halland</p>
       <span />
-      <p>
-        Vi hjälper dig att ta jägarexamen, bli jaktledare och jaga i Halland
-      </p>
+      <p>Vi hjälper dig att ta jägarexamen.</p>
+      <p>Nu med skjutsimulator!</p>
     </div>
 
     <div class="img" />
 
     <div class="button-container">
-      <div on:click={() => scrollTo({element: `#article-1`})} class="primary">
-        <Ripple style={{ height: '100%' }}>Jägarexamen</Ripple>
-      </div>
+			<div class="primary">
+					<a href="https://www.bokadirekt.se/places/jakthalland-44109" target="_blank">
+					<Ripple style={{ height: '100%' }}><img src="https://foretag.bokadirekt.se/bokatid/BokaTid_Gron_MorkBakgrund_120px.png" alt="Boka tid" border="0" style="width: 200px" /></Ripple>
+				</a>
+			</div>
       <div on:click={() => scrollTo({element: `.form`})} class="secondary">
         <Ripple style={{ height: '100%' }}>Kontakta oss</Ripple>
       </div>

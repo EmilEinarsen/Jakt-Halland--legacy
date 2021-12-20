@@ -63,18 +63,22 @@ function formSuccess() {
 		<div class="lazy">
 			<div>
 				<h1>KONTAKTA OSS</h1>
-				<p>Ställ frågor och anmäl intresse</p>
-				<p><i class="fas fa-envelope"></i> info@jakthalland.se</p>
+				<p>Ställ frågor, boka skjutsimulator och anmäl intresse</p>
+				<p>info@jakthalland.se</p>
 				<p>Östertullsgatan 9, Laholm</p>
+				<p style="margin-bottom: 2rem">070-415 27 59</p>
+				<a href="https://www.bokadirekt.se/places/jakthalland-44109" target="_blank"> <img src="https://foretag.bokadirekt.se/bokatid/BokaTid_Gron_MorkBakgrund_120px.png" alt="Boka tid" border="0" /></a>
 			</div>
 		</div>
 	</div>
 
 	<div>
 		<div>
-			<p>Ställ frågor och anmäl intresse</p>
-			<p><i class="fas fa-envelope"></i> info@jakthalland.se</p>
+			<p>Ställ frågor, boka skjutsimulator och anmäl intresse</p>
+			<p>info@jakthalland.se</p>
 			<p>Östertullsgatan 9, Laholm</p>
+			<p style="margin-bottom: 1.5rem">070-415 27 59</p>
+			<a href="https://www.bokadirekt.se/places/jakthalland-44109" target="_blank"> <img src="https://foretag.bokadirekt.se/bokatid/BokaTid_Gron_MorkBakgrund_120px.png" alt="Boka tid" border="0" /></a>
 		</div>
 		
 		<form class:success class:error id="form" action="https://formspree.io/f/mqkyjrro" method="POST"> 
