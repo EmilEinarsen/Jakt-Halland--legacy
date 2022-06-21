@@ -5,22 +5,22 @@ import Right from './right.md'
 
 import Thumbnail from "../../components/_thumbnail.svelte"
 
-export let leader
+export let survival
 
 </script>
 
 <article id="article-2">
 	<Thumbnail  
 		data={{
-			title: 'Jaktledarutbildning',
-			photoPath: '../img/hunter-1200x1000-min.jpg',
-			photoBackgroundColor: '#44413f',
+			title: 'Överlevnad',
+			photoPath: '../img/viacheslav.jpg',
+			photoBackgroundColor: '#382f24',
 		}}
 	/>
 	<div>
 		<div class="flex_gap_text">
 
-			<Left event={leader} />
+			<Left event={survival} />
 			
 			<Right />
 

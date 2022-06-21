@@ -12,8 +12,7 @@
   $: [{ intensiveData, calmData }] = [data]
 </script>
 
-<style src="../context/_article.sass">
-</style>
+<style src="../context/_article.sass"></style>
 
 <article id="article-1">
 	<Thumbnail

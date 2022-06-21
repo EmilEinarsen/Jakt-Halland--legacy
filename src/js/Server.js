@@ -3,8 +3,8 @@ import { orginizeData, sortDataByEvent } from './Sort'
 export async function getEvents() {
 	const raw = await fetchData()
 	const orginized = orginizeData(raw)
-	const [intensive, summer, leader, calm, weekend, other] = sortDataByEvent(orginized)
-	return Promise.resolve({intensive, summer, leader, calm, weekend, other})
+	const [intensive, summer, leader, calm, weekend, survival, other] = sortDataByEvent(orginized)
+	return Promise.resolve({intensive, summer, leader, calm, weekend, survival, other})
 }
 export async function fetchData() {
 	try {
@@ -12,7 +12,7 @@ export async function fetchData() {
 			(await fetch("https://wordpress.jakthalland.se/wp-json/wp/v2/events")).json(),
 		])
 		return Promise.resolve(events)
-	} catch (err) {
-		console.log(err)
+	} catch (error) {
+		console.log(error);
 	}
 }

@@ -2,7 +2,7 @@ const months = ["Januari", "Februari", "Mars", "April", "Maj", "Juni",
 	"Juli", "Augusti", "September", "Oktober", "November", "December"]
 const monthAbbriviations = ['jan', 'feb', 'mars', 'april', 'maj', 'juni', 'juli', 'aug', 'sep', 'okt', 'nov', 'dec']
 
-export const structureApprouchingEvents = ({intensive, summer, leader, calm, weekend, other}, abbriviation) => ({
+export const structureApprouchingEvents = ({intensive, summer, leader, calm, weekend, survival, other}, abbriviation) => ({
 	intensive: 
 		intensive.length === 0 ? ''
 		: intensive.length === 1 ? produceDateString(intensive[0], abbriviation) 
@@ -22,6 +22,9 @@ export const structureApprouchingEvents = ({intensive, summer, leader, calm, wee
 		: `${produceDateString(calm[0], abbriviation)}, ${produceDateString(calm[1], abbriviation)} och ${produceDateString(calm[2], abbriviation)}`
 	,
 	weekend: weekend.length ? structureWeekend(weekend, true) : {},
+	survival: survival.length === 0 ? ''
+		: survival.length === 1 ? produceDateString(survival[0], abbriviation) 
+		: `${produceDateString(survival[0], abbriviation)} och ${produceDateString(survival[1], abbriviation)}`
 })
 
 function structureWeekend(weekend, abbriviation) {

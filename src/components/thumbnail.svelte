@@ -11,8 +11,8 @@ let content = [
 		text: 'Lär dig allt som behövs för att bli en bra jaktledare.',
 	},
 	{ 
-		title: 'Jakthelg i Halland', 
-		text: 'Bock-, Gris-, Rådjursjakt samt transport och hotell med helpension.',
+		title: 'Överlevand', 
+		text: 'Känna er trygga i att ni har kunskapen som krävs för att klara en kris.',
 	},
 ]
 
@@ -20,7 +20,7 @@ let content = [
 
 <div class="thumbnail-container">
 	{#each content as { title, text }, index}
-		<div on:click={() => scrollTo({element: `#article-${++index}`})} class="lazy">
+		<div on:click={() => scrollTo({element: `#article-${index+1}`})} class="lazy">
 			<div>
 				<p>{title}</p>
 				<span></span>
