@@ -5,7 +5,7 @@ export let weekend
 $: [{pig, deer, deerPig}] = weekend ? [weekend] : [{}]
 </script>
 
-<article id="article-3">
+<article id="article-4">
 	<Thumbnail  
 		data={{
 			title: 'Jakthelg i Halland',

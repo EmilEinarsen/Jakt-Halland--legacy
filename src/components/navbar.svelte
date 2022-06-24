@@ -93,10 +93,10 @@ import { element } from 'svelte/internal'
 
 			{#if isOpen || !isMobile}
 				<ul class:isMobile class:isTransparent transition:slide="{{duration: 300, y: -150}}">
-					<li on:click={scrollToTop}>Hem</li>
 					<li on:click={() => scrollTo({element: '#article-1'})}>Jägarexamen</li>
 					<li on:click={() => scrollTo({element: '#article-2'})}>Jaktledarutbildning</li>
-					<li on:click={() => scrollTo({element: '#article-3'})}>Jakt</li>
+					<li on:click={() => scrollTo({element: '#article-3'})}>Överlevnad</li>
+					<li on:click={() => scrollTo({element: '#article-4'})}>Jakt</li>
 					<li on:click={() => scrollTo({element: '.form'})}>Kontakta</li>
 				</ul>
 				<div class:isMobile class="shadow" transition:fade="{{duration: 200}}"></div>
@@ -211,7 +211,7 @@ nav
 			align-items: center
 			transition: .3s linear
 			right: 25px
-			width: percentage(1010/1680)
+			width: percentage(1100/1680)
 			li
 				color: #223D6E
 				height: 90px

@@ -1,11 +1,12 @@
 <script src="../context/script.js"></script>
 
 <div class="body">
-Pris: _3 499kr - 4 499kr_
+<p>Pris: <i>3 499kr - 4 499kr</i></p>
 
 <Event {event} {data} >
 	> <Location />
 </Event>
+
 För att klara en kris eller ett elavbrott under längre tid krävs kunskap och vilja.
 
 Vi hjälper er med grunderna i överlevnad, så att ni ska känna er trygga i att ni har kunskapen som krävs för att klara en kris.

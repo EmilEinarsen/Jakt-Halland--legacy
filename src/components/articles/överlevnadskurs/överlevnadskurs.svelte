@@ -9,7 +9,7 @@ export let survival
 
 </script>
 
-<article id="article-2">
+<article id="article-3">
 	<Thumbnail  
 		data={{
 			title: 'Överlevnad',
