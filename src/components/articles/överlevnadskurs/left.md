@@ -4,7 +4,7 @@
 <p>Pris: <i>3 499kr - 4 499kr</i></p>
 
 <Event {event} {data} >
-	> <Location />
+	> Alla kurser hålls i Laholm / Halmstad
 </Event>
 
 För att klara en kris eller ett elavbrott under längre tid krävs kunskap och vilja.

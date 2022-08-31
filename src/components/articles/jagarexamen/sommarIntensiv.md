@@ -6,7 +6,7 @@
 Pris: _8 800 kr_
 
 <Event {event} {data} > 
-	> <Location />
+	> Alla kurser hålls i Laholm / Halmstad
 </Event>
 
 <div class="list">

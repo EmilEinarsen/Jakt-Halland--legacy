@@ -1,1 +1,0 @@
-Alla kurser hålls i Laholm / Halmstad

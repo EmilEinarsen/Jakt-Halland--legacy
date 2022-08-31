@@ -1,5 +1,4 @@
 <script>
-  import Location from "./articles/context/location.md";
   import Subtext from "./components/_subtext.svelte";
   import { fade } from "svelte/transition";
 
@@ -56,7 +55,7 @@
 
                 <br />
                 <Subtext>
-                  <Location />
+                  Alla kurser hålls i Laholm / Halmstad
                 </Subtext>
               </p>
             {/each}
