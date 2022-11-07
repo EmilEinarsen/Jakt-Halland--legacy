@@ -7,7 +7,6 @@
 	import { isWidthMobile } from '../js/Validate'
 	import { Scroll } from '../js/Tools'
 	import { targetId } from '../js/Helpers';
-import { element } from 'svelte/internal'
 
 	const scroll = new Scroll()
 	const { getDirection, getPosY } = scroll
