@@ -67,7 +67,6 @@ function formSuccess() {
 				<p>info@jakthalland.se</p>
 				<p>Östertullsgatan 9, Laholm</p>
 				<p style="margin-bottom: 2rem">070-415 27 59</p>
-				<a href="https://www.bokadirekt.se/places/jakthalland-44109" target="_blank"> <img src="https://foretag.bokadirekt.se/bokatid/BokaTid_Gron_MorkBakgrund_120px.png" alt="Boka tid" border="0" /></a>
 			</div>
 		</div>
 	</div>
@@ -78,7 +77,6 @@ function formSuccess() {
 			<p>info@jakthalland.se</p>
 			<p>Östertullsgatan 9, Laholm</p>
 			<p style="margin-bottom: 1.5rem">070-415 27 59</p>
-			<a href="https://www.bokadirekt.se/places/jakthalland-44109" target="_blank"> <img src="https://foretag.bokadirekt.se/bokatid/BokaTid_Gron_MorkBakgrund_120px.png" alt="Boka tid" border="0" /></a>
 		</div>
 		
 		<form class:success class:error id="form" action="https://formspree.io/f/mqkyjrro" method="POST"> 

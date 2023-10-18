@@ -30,11 +30,6 @@
     <div class="img" />
 
     <div class="button-container">
-			<div class="primary">
-					<a href="https://www.bokadirekt.se/places/jakthalland-44109" target="_blank">
-					<Ripple style={{ height: '100%' }}><img src="https://foretag.bokadirekt.se/bokatid/BokaTid_Gron_MorkBakgrund_120px.png" alt="Boka tid" border="0" style="width: 200px" /></Ripple>
-				</a>
-			</div>
       <div on:click={() => scrollTo({element: `.form`})} class="secondary">
         <Ripple style={{ height: '100%' }}>Kontakta oss</Ripple>
       </div>
