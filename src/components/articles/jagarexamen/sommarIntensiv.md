@@ -6,7 +6,7 @@
 Pris: _8 800 kr_
 
 <Event {event} {data} > 
-	> Våra kurser hålls i Laholm, Halmstad och Varberg
+	> Våra kurser hålls i Laholm och Halmstad
 </Event>
 
 <div class="list">

@@ -55,7 +55,7 @@
 
                 <br />
                 <Subtext>
-									Våra kurser hålls i Laholm, Halmstad och Varberg
+									Våra kurser hålls i Laholm och Halmstad
                 </Subtext>
               </p>
             {/each}
