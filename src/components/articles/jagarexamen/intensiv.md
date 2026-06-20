@@ -3,38 +3,39 @@
 <div class="body">
 # Intensivkurs
 						
-Pris: _7 400 kr_
+Pris: _6 995 kr_
 
 <Event {event} {data} > 
-	> Våra kurser hålls i Laholm och Halmstad
+	> Plats: Östertullsgatan 9, 302 30 Laholm
 </Event>
+
+Kursen är på 4 dagar, uppdelad på två helger. Vi läser teori första helgen och avslutar helgen med teoriprov. Nästa helg börjar vi med skytteträning i simulator på lördagen. På söndagen kommer vi att ha uppskjutningen med kula och hagel.
 
 <div class="list">
 	I paketet ingår:
 	* Litteratur: Boken skickas till dig i förväg.
 	* Skjutning i simulator.
-	* Övningsskytte med hagel exklusive ammunition.
 	* Lunch och middag under utbildningen
 </div>
 
 <div class="list">
-	Avgifter som tillkommer:
-	* Naturvårdsverkets provavgifter.
-	* Avgift för ammunition.
+	Avgifter som tillkommer Naturvårdsverkets kostnader:
+	* 500 kr - Teori
+	* 400 kr - Hagelprov
+	* 200 kr - Grundprov (Kulgevär)
+	* 200 kr - Högviltsprov (kulgevär)
+	* 100 kr - Omprovsmoment
+	* 50 kr - Tilläggsserie (Högvilt)
+	* Samt ammunition.
 </div>
-
-Under 3,5 dagar kommer du lära dig allt som behövs för att ta jägarexamen, (torsdag till söndag). Kursen startar på torsdag klockan 13.00 och avslutas på söndag vid 15.00.
 
 <div class="list">
 	Avgiften är uppdelad i två fakturor:
 	1) 2 000 kr _(anmälningsavgift)_.
-	2) 5 400 kr _(betalas 10 dagar innan kursen startar)_.
+	2) 4 995 kr _(betalas 10 dagar innan kursen startar)_.
 </div>
 
 Skulle du misslyckas med någon del av proven så kommer vi att hjälpa dig, så att du klarar det vid ett senare tillfälle.
-
-> Vill ni ha hjälp med boende så kan vi hjälpa till med det.
-Det finns både vandrarhem och hotell i Laholm.
 
 > <Info></Info>
 

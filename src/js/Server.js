@@ -9,7 +9,7 @@ export async function getEvents() {
 export async function fetchData() {
 	try {
 		const [events] = await Promise.all([
-			(await fetch("https://wordpress.jakthalland.se/wp-json/wp/v2/events")).json(),
+			(await fetch("./events.json")).json(),
 		])
 		return Promise.resolve(events)
 	} catch (error) {
